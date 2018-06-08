@@ -1,0 +1,10 @@
+/*
+Theme Name: UP Code
+Theme URI: https://upcode.cloud
+Description: Framework UP Code
+Version: 1.0.1
+Author: Bruno Souza 
+*/
+
+@import "assets/css/_bootstrap.offcanvas.css";
+@import "assets/css/_theme.css";

@@ -1,0 +1,43 @@
+/* dividir repeater em blocos */
+/* ----------------------------------------- */
+#bloco-col-2 {
+	.acf-table {
+		> tbody {
+			> tr {
+					float: left;
+					width: 50%;
+			}
+		}
+	}
+	.acf-repeater .acf-row-handle.order + td {
+		width: 96%;
+	}
+}
+
+#bloco-col-3 {
+	.acf-table {
+		> tbody {
+			> tr {
+					float: left;
+					width: 33.3333%;
+			}
+		}
+	}
+	.acf-repeater .acf-row-handle.order + td {
+		width: 96%;
+	}
+}
+#bloco-col-4 {
+	.acf-table {
+		> tbody {
+			> tr {
+					float: left;
+					width: 25%;
+			}
+		}
+	}
+	.acf-repeater .acf-row-handle.order + td {
+		width: 96%;
+	}
+}
+/* ----------------------------------------- dividir repeater em blocos */

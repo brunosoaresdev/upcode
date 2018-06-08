@@ -1,0 +1,235 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bfriend framework\n"
+"POT-Creation-Date: 2016-12-14 12:07-0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Jürgen Rabe | www.egado.de <rabe@egado.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../404.php:16
+msgid "Ops."
+msgstr ""
+
+#: ../404.php:17
+msgid "Acho que você se perdeu, digite abaixo o que procura ou volte para a página inicial."
+msgstr ""
+
+#: ../archive.php:23
+#, php-format
+msgid "Arquivos do dia: %s"
+msgstr ""
+
+#: ../archive.php:25
+#, php-format
+msgid "Arquivos do mês: %s"
+msgstr ""
+
+#: ../archive.php:27
+#, php-format
+msgid "Arquivos do ano: %s"
+msgstr ""
+
+#: ../archive.php:29
+msgid "Arquivos"
+msgstr ""
+
+#: ../category.php:15
+#, php-format
+msgid "Categoria: %s"
+msgstr ""
+
+#: ../comments.php:38
+msgid "&larr; Comentários Anteriores"
+msgstr ""
+
+#: ../comments.php:39
+msgid "Próximos Comentários &rarr;"
+msgstr ""
+
+#: ../comments.php:49
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:50
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:95
+msgid "Deixe um comentário"
+msgstr ""
+
+#: ../comments.php:96
+#, php-format
+msgid "Responda a %s"
+msgstr ""
+
+#: ../comments.php:97
+msgid "Cancelar resposta"
+msgstr ""
+
+#: ../comments.php:98
+msgid "Postar comentário"
+msgstr ""
+
+#: ../comments.php:107
+#, php-format
+msgid "Você precisa fazer <a href=\"%s\">login</a> para postar um comentário."
+msgstr ""
+
+#: ../comments.php:113
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
+msgstr ""
+
+#: ../functions/setup.php:31
+msgid "Navegação Global"
+msgstr ""
+
+#: ../functions/setup.php:32
+msgid "Navegação Local"
+msgstr ""
+
+#: ../functions/setup.php:70
+#, php-format
+msgid "Search results for %s"
+msgstr ""
+
+#: ../functions/setup.php:73 ../functions/setup.php:90
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../functions/setup.php:127
+msgid "Saiba mais"
+msgstr ""
+
+#: ../functions/setup.php:187
+msgid "Sidebar"
+msgstr ""
+
+#: ../functions/setup.php:189
+msgid "Arraste os itens desejados até aqui. "
+msgstr ""
+
+#: ../includes/cpt-arquivos.php:51
+msgid "Buscar Types"
+msgstr ""
+
+#: ../includes/cpt-arquivos.php:52
+msgid "Todas Tags"
+msgstr ""
+
+#: ../includes/cpt-arquivos.php:53
+msgid "Parent Tag"
+msgstr ""
+
+#: ../includes/cpt-arquivos.php:54
+msgid "Parent Tag:"
+msgstr ""
+
+#: ../includes/cpt-arquivos.php:55
+msgid "Editar Tags"
+msgstr ""
+
+#: ../includes/cpt-arquivos.php:56
+msgid "Atualizar Tag"
+msgstr ""
+
+#: ../includes/cpt-arquivos.php:57
+msgid "Adicionar nova categoria"
+msgstr ""
+
+#: ../includes/cpt-arquivos.php:58
+msgid "Novo nome de tag"
+msgstr ""
+
+#: ../includes/cpt-servicos.php:13 ../includes/cpt-servicos.php:24
+msgid "Serviços"
+msgstr ""
+
+#: ../includes/cpt-servicos.php:14
+msgid "Serviço"
+msgstr ""
+
+#: ../includes/cpt-servicos.php:16
+msgid "Add New Serviço"
+msgstr ""
+
+#: ../includes/cpt-servicos.php:17
+msgid "Edit Serviço"
+msgstr ""
+
+#: ../includes/cpt-servicos.php:18
+msgid "New Serviço"
+msgstr ""
+
+#: ../includes/cpt-servicos.php:19
+msgid "View Serviço"
+msgstr ""
+
+#: ../includes/cpt-servicos.php:20
+msgid "Search Serviços"
+msgstr ""
+
+#: ../includes/cpt-servicos.php:21
+msgid "No Serviços found"
+msgstr ""
+
+#: ../includes/cpt-servicos.php:22
+msgid "No Serviços found in Trash"
+msgstr ""
+
+#: ../includes/cpt-servicos.php:23
+msgid "Parent Serviço:"
+msgstr ""
+
+#: ../index.php:34 ../single.php:25
+msgid "Publicado por"
+msgstr ""
+
+#: ../index.php:43 ../search.php:36 ../single.php:40
+msgid "Desculpe, nenhum post encontrado."
+msgstr ""
+
+#: ../search.php:16
+#, php-format
+msgid "Resultado da busca por: %s"
+msgstr ""
+
+#: ../search.php:27
+msgid "Published by"
+msgstr ""
+
+#: ../search.php:28
+msgid "Leave your thoughts"
+msgstr ""
+
+#: ../search.php:28
+msgid "1 Comment"
+msgstr ""
+
+#: ../search.php:28
+msgid "% Comments"
+msgstr ""
+
+#: ../single.php:30
+msgid "Tags: "
+msgstr ""
+
+#: ../tag.php:14
+#, php-format
+msgid "Tags: %s"
+msgstr ""
+
+#~ msgid "%s results for "
+#~ msgstr "%s Ergebnisse für "

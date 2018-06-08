@@ -1,0 +1,143 @@
+//
+// Load core variables and mixins
+// --------------------------------------------------
+
+@import "bootstrap";
+@import "bfriend-mixins";
+@import "bfriend-default";
+@import "bootstrap/mixins";
+
+/* body  */
+/* ----------------------------------------- */
+  body {}
+
+  ul {
+    &.social-networks {
+      list-style: none;
+      padding: 0;
+      display: flex;
+
+      li {
+        margin: 0 5px;
+        
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+          background-color: $cor-seg;
+          border: 1px solid $cor-seg;
+          color: $cor-pri;
+          @include radius(50%);
+
+          &:hover {
+            background-color: transparent;
+            color: $cor-seg;
+          }
+        }
+      }
+    }
+  }
+
+  .wpcf7 {
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid $cor-pri;
+      padding: 10px;
+      margin: 0 0 10px;
+      float: left;
+      color: $cor-pri;
+      outline: none;
+      @include font(16px);
+      @include radius(10px);
+      @include placeholder { color: $cor-pri; }
+      
+      &[type="submit"] {
+        width: auto;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        @include bold;
+        @include radius(5px);
+        @include transition(all 300ms ease-in-out);
+        &:hover {}
+      }
+    }
+  }
+/* ----------------------------------------- body */
+
+/* header */
+/* ----------------------------------------- */
+  header {
+    &#header {
+      .logotipo {
+        img {}
+      }
+
+      nav#navbar {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        
+        .navbar-header {
+          .navbar-toggle {
+            position: relative;
+            float: right;
+            padding: 9px 10px;
+            margin: 10px 15px 10px 0;
+            background-color: $cor-pri;
+            border: 1px solid $cor-pri;
+            @include radius(4px);
+            
+            .icon-bar {
+              display: block;
+              width: 22px;
+              height: 2px;
+              @include radius(1px);
+            }
+            .icon-bar + .icon-bar { margin-top: 4px; }
+          }
+        }
+        
+        .navbar-offcanvas {
+          width: 100%;
+        
+          ul {
+            li {
+              a {
+                font-family: $font-pri;
+                color: $cor-pri;
+                @include font(16px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+/* ----------------------------------------- header */
+
+/* slideshow */
+/* ----------------------------------------- */
+  #slideshow {
+    .banner {}
+  }
+/* ----------------------------------------- slideshow */
+
+/* content */
+/* ----------------------------------------- */
+  main#content {
+    article.page {
+      &.index {}
+      &.single {}
+    }
+  }
+/* ----------------------------------------- content */
+
+/* footer */
+/* ----------------------------------------- */
+  footer {
+    &#footer {}
+  }
+/* ----------------------------------------- footer */
