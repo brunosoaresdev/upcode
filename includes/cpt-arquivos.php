@@ -3,28 +3,28 @@
   /* ----------------------------------------------------- */
   /* Criando Custom Post Type */
   /* ----------------------------------------------------- */
-  add_action( 'init', 'register_cpt_arquivo' );
+  add_action( 'init', 'register_cpt_produto' );
 
-  function register_cpt_arquivo() {
+  function register_cpt_produto() {
     $labels = array(
-      'name' => _x( 'Arquivo', 'bfriend' ),
-      'singular_name' => _x( 'Arquivo', 'bfriend' ),
-      'add_new' => _x( 'Adicionar novo', 'bfriend' ),
-      'add_new_item' => _x( 'Adicionar novo arquivo', 'bfriend' ),
-      'edit_item' => _x( 'Editar arquivo', 'bfriend' ),
-      'new_item' => _x( 'Novo arquivo', 'bfriend' ),
-      'view_item' => _x( 'Ver arquivo', 'bfriend' ),
-      'search_items' => _x( 'Buscar arquivo', 'bfriend' ),
-      'not_found' => _x( 'Nenhum arquivo encontrado', 'bfriend' ),
-      'not_found_in_trash' => _x( 'Nenhum arquivo encontrado no Lixo', 'bfriend' ),
-      'parent_item_colon' => _x( 'Parent arquivo:', 'bfriend' ),
-      'menu_name' => _x( 'Arquivos', 'bfriend' ),
+      'name' => _x( 'Produtos', 'upcode' ),
+      'singular_name' => _x( 'Produto', 'upcode' ),
+      'add_new' => _x( 'Adicionar novo', 'upcode' ),
+      'add_new_item' => _x( 'Adicionar novo produto', 'upcode' ),
+      'edit_item' => _x( 'Editar produto', 'upcode' ),
+      'new_item' => _x( 'Novo produto', 'upcode' ),
+      'view_item' => _x( 'Ver produto', 'upcode' ),
+      'search_items' => _x( 'Buscar produto', 'upcode' ),
+      'not_found' => _x( 'Nenhum produto encontrado', 'upcode' ),
+      'not_found_in_trash' => _x( 'Nenhum produto encontrado no Lixo', 'upcode' ),
+      'parent_item_colon' => _x( 'Parent produto:', 'upcode' ),
+      'menu_name' => _x( 'Produtos', 'upcode' ),
     );
 
     $args = array(
       'labels' => $labels,
       'hierarchical' => false,
-      'taxonomies' => array( 'ct-arquivo' ),
+      'taxonomies' => array( 'ctproduto' ),
       'public' => true,
       'show_ui' => true,
       'show_in_menu' => true,
@@ -41,22 +41,14 @@
       'supports' => [
         'title', 
         'editor', 
-        'thumbnail',
-        // 'excerpt',
-        // 'custom-fields',
-        // 'trackbacks',
-        // 'comments',
-        // 'author', 
-        // 'revisions',
-        // 'page-attributes',
-        // 'post-formats'
+        'thumbnail'
       ]
     );
-    register_post_type( 'arquivo', $args );
+    register_post_type( 'produto', $args );
 
     // Registrando Taxonomia
     $labels = array(
-      'name' => _x( 'Categorias Arquivos', 'taxonomy general name' ),
+      'name' => _x( 'Categorias produtos', 'taxonomy general name' ),
       'singular_name' => _x( 'Tag', 'taxonomy singular name' ),
       'search_items' =>  __( 'Buscar Types' ),
       'all_items' => __( 'Todas Tags' ),
@@ -67,7 +59,7 @@
       'add_new_item' => __( 'Adicionar nova categoria' ),
       'new_item_name' => __( 'Novo nome de tag' ),
     );
-    register_taxonomy('ctarquivo',array('arquivo'), array(
+    register_taxonomy('ctproduto',array('produto'), array(
       'hierarchical' => true,
       'labels' => $labels,
       'show_ui' => true,

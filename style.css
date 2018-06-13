@@ -1,9 +1,14 @@
 /*
 Theme Name: UP Code
-Theme URI: https://upcode.cloud
-Description: Framework UP Code
+Theme URI: https://github.com/bsdsouzagit/upcode
+Description: Base theme for development with WordPress.
+Author: Bruno Souza <wp@upcode.cloud>
 Version: 1.0.1
-Author: Bruno Souza 
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: odin
+Don't add css in this file!
+The theme css is in assets/css/_style.css
 */
 
 @import "assets/css/_bootstrap.offcanvas.css";
