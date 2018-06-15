@@ -5,8 +5,8 @@
 		<div class="col-md-8">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<article <?php post_class('page 404'); ?> >
-					<h1><?php _e( 'Página não encontrada.', 'bfriend' ); ?></h1>
-					<p><?php _e( 'Acho que você se perdeu, digite abaixo o que procura ou volte para a página inicial.', 'bfriend' ); ?></p>
+					<h1><?php _e( 'Página não encontrada.', 'upcode' ); ?></h1>
+					<p><?php _e( 'Acho que você se perdeu, digite abaixo o que procura ou volte para a página inicial.', 'upcode' ); ?></p>
 					<?php get_search_form(); ?>
 
 					<script type="text/javascript">

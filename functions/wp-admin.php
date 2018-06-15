@@ -2,7 +2,7 @@
 /**
  * Filter Yoast Meta Priority
  *
- * @since Bfriend 4.0
+ * @since upcode 4.0
  */
 /* -------------------------------------------------- */
 function lower_wpseo_priority( $html ) { return 'low'; }

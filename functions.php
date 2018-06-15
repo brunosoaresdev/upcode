@@ -7,13 +7,13 @@ require_once ('functions/setup.php');
 require_once ('functions/wp-admin.php');
 
 // Define as funções gerais
-require_once ('functions/bfriend.php');
+require_once ('functions/upcode.php');
 
 // Define as funções gerais do acf
-require_once ('functions/bfriend-acf.php');
+require_once ('functions/upcode-acf.php');
 
 // Define as funções personalizadas
-require_once ('functions/bfriend-functions.php');
+require_once ('functions/upcode-functions.php');
 
 // Define as funções sociais
 require_once ('functions/opcionais.php');

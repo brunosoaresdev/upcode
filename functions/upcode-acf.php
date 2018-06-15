@@ -2,7 +2,7 @@
 /**
  * key acf google maps
  *
- * @since Bfriend 4.0
+ * @since upcode 4.0
  */
 /* -------------------------------------------------- */
 function my_acf_init() {
@@ -14,7 +14,7 @@ add_action('acf/init', 'my_acf_init');
 /**
  * Taxonomy background
  *
- * @since Bfriend 4.0
+ * @since upcode 4.0
  */
 /* Modo de uso <section id="topo" <?php taxonomdy_thumbnail_by( 'nome-field' ); ?>> */
 function taxonomy_thumbnail_bg ( $nomeField ) {
@@ -34,7 +34,7 @@ function taxonomy_thumbnail_bg ( $nomeField ) {
 /**
  * Acf field backgound
  *
- * @since Bfriend 4.0
+ * @since upcode 4.0
  */
 /* ----------------------------------------- */
 function acf_thumbnail_bg ( $nomeField ) {
@@ -50,7 +50,7 @@ function acf_thumbnail_bg ( $nomeField ) {
 /**
  * Acf sub_field backgound
  *
- * @since Bfriend 4.0
+ * @since upcode 4.0
  */
 /* ----------------------------------------- */
 function acf_sub_thumbnail_bg ( $nomeField ) {

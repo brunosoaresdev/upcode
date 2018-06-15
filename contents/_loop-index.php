@@ -17,7 +17,7 @@
 						
 						<ul class="infos">
 							<li class="time"><time><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></time></li>
-							<li class="author"><?php _e( 'Publicado por', 'bfriend' ); ?> <?php the_author_posts_link(); ?></li>
+							<li class="author"><?php _e( 'Publicado por', 'upcode' ); ?> <?php the_author_posts_link(); ?></li>
 							<li class="comments"><?php comments_number( '0 comentário', '1 comentário', '% comentários' ); ?></li>
 						</ul>
 

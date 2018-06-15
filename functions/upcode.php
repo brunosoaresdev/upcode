@@ -2,7 +2,7 @@
 /**
  * suporte para título
  *
- * @since Bfriend 4.0
+ * @since upcode 4.0
  */
 /* -------------------------------------------------- */
 add_theme_support( 'title-tag' );
@@ -10,7 +10,7 @@ add_theme_support( 'title-tag' );
 /**
  * Limitar o número de caracteres baseado na $excerpt
  *
- * @since Bfriend 4.0
+ * @since upcode 4.0
  */
 /* Modo de uso <?php echo content(10); ?> */
 function content($limit) {
@@ -30,7 +30,7 @@ function content($limit) {
 /**
  * Limitar o número de caracteres baseado na $excerpt
  *
- * @since Bfriend 4.0
+ * @since upcode 4.0
  */
 /* <p><?php echo excerpt('40'); ?></p> */
 function excerpt($limit) {
@@ -48,7 +48,7 @@ function excerpt($limit) {
 /**
  * Thumbnail background
  *
- * @since Bfriend 4.0
+ * @since upcode 4.0
  */
 /* Modo de uso <section id="topo" <?php thumbnail_bg( 'paginas-destaque' ); ?>> */
 function thumbnail_bg ( $tamanho = 'full' ) {
@@ -67,7 +67,7 @@ function thumbnail_bg ( $tamanho = 'full' ) {
 /**
  * remove http or wwww
  *
- * @since Bfriend 4.0
+ * @since upcode 4.0
  */
 /* -------------------------------------------------- */
 function clear_url($input) {
@@ -83,7 +83,7 @@ function clear_url($input) {
 /**
  * get url of image
  *
- * @since Bfriend 4.0
+ * @since upcode 4.0
  */
 /* -------------------------------------------------- */
 function images_url($file) {
@@ -93,7 +93,7 @@ function images_url($file) {
 /**
  * get url of image
  *
- * @since Bfriend 4.0
+ * @since upcode 4.0
  */
 /* -------------------------------------------------- */
 function get_images_url($file) {
@@ -103,7 +103,7 @@ function get_images_url($file) {
 /**
  * comentarios personalizados
  *
- * @since Bfriend 4.0
+ * @since upcode 4.0
  */
 /* ----------------------------------------- */
 function mytheme_comment($comment, $args, $depth) {
@@ -150,10 +150,10 @@ function mytheme_comment($comment, $args, $depth) {
 /**
  * related posts
  *
- * @since Bfriend 4.0
+ * @since upcode 4.0
  */
 /* ----------------------------------------- */
-function bfriendRelated($args = []) { 
+function upcodeRelated($args = []) { 
   global $post;
   $postTypeObj = get_post_type_object($post->post_type);    
   $taxonomies = isset($args['taxonomies']) ? $args['taxonomies'] : $postTypeObj->taxonomies;
@@ -193,7 +193,7 @@ function bfriendRelated($args = []) {
 /**
  * Filtro para criar container responsivo nos embeds do the_content
  *
- * @since Bfriend 4.0
+ * @since upcode 4.0
  */
 /* ----------------------------------------- */
   add_filter('embed_oembed_html', 'wrap_embed_with_div', 10, 3);
