@@ -1,5 +1,18 @@
 /* dividir repeater em blocos */
 /* ----------------------------------------- */
+#bloco-col-2,
+#bloco-col-3,
+#bloco-col-4,
+#bloco-col-5,
+#bloco-col-6 {
+	.acf-table {
+		> tbody {
+			display: flex;
+    	flex-wrap: wrap;
+		}
+	}
+}
+
 #bloco-col-2 {
 	.acf-table {
 		> tbody {
