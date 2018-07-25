@@ -50,7 +50,8 @@
 			]
 		});
 
-
+		$('.wpcf7-form input[type="submit"]').replaceWith('<button id="submit" type="submit" class="btn icon">' + $('.wpcf7-form input[type="submit"]').val() +'</button>');
+		
 		/*  Default Scripts */
 		/* ----------------------------------------- */
 		// Mascara de DDD e 9 dígitos para telefones
