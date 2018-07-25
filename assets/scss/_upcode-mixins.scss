@@ -2,14 +2,18 @@
 /* ----------------------------------------- */
 	$font-pri:    '', sans-serif;
 
-	$cor-pri:     transparent;
-	$cor-seg:     transparent;
-	$cor-ter:     transparent;
-	$cor-qua:     transparent;
+	$up-colors: (
+		primary: transparent,
+		secondary: transparent,
+	) !default;
 /* ----------------------------------------- variables */
 
 /* Functions */
 /* ----------------------------------------- */
+	@function up-colors($key: "primary") {
+		@return map-get($up-colors, $key);
+	}
+
 	@mixin columns($qtd: 2) {
 		@include media-breakpoint-down(sm) {
 			-webkit-column-count: $qtd; /* Chrome, Safari, Opera */

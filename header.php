@@ -32,32 +32,26 @@
           </div>
           <div class="col-md-9">
             <?php get_template_part('partials/_social-links'); ?>
-            <nav id="navbar" class="navbar  navbar-expand-lg navbar-dark">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle offcanvas-toggle pull-right d-sm-none" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas">
-                  <span class="sr-only">Toggle navigation</span>
-                    <span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </span>
-                </button>
-              </div>
+            <nav class="navbar navbar-expand-lg bsnav bsnav-light">
+              <button class="navbar-toggler toggler-spring"><span class="navbar-toggler-icon"></span></button>
               <?php
                 wp_nav_menu([
                   'menu'            => 'principal',
                   'theme_location'  => 'top',
                   'container'       => 'div',
-                  'container_id'    => 'js-bootstrap-offcanvas',
-                  'container_class' => 'navbar-offcanvas navbar-offcanvas-touch',
+                  'container_class' => 'collapse navbar-collapse justify-content-md-end',
                   'menu_id'         => false,
-                  'menu_class'      => 'navbar-nav mr-auto',
-                  'depth'           => 2,
+                  'menu_class'      => 'navbar-nav navbar-mobile mr-0',
+                  'depth'           => 3,
                   'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
                   'walker'          => new wp_bootstrap_navwalker()
                 ]);
               ?>
             </nav>
+            <div class="bsnav-mobile">
+              <div class="bsnav-mobile-overlay"></div>
+              <div class="navbar"></div>
+            </div>
           </div>
         </div>
       </div>

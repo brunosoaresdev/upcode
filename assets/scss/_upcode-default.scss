@@ -48,15 +48,15 @@ button {
 
 h1, h2, h3, h4, h5, h6, p, a, li, span {
 	&::selection {
-		background-color: $cor-pri;
+		background-color: up-colors('primary');
 		color: #fff;
 	}
 	&::-moz-selection {
-		background-color: $cor-pri;
+		background-color: up-colors('primary');
 		color: #fff;
 	}
 	&::-webkit-selection {
-		background-color: $cor-pri;
+		background-color: up-colors('primary');
 		color: #fff;
 	}
 }
@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6, p, a, li, span {
 	margin: 0 !important;
 	margin-bottom: 1em !important;
 	position: relative;
-	border: 1px solid $cor-pri;
+	border: 1px solid up-colors('primary');
 	z-index: 2;
 	width: 100%;
 	
@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6, p, a, li, span {
 	  z-index: 2;
 	  width: 100%;
 	  background: transparent;
-	  color: $cor-pri;
+	  color: up-colors('primary');
 	  display: inline-block;
 	  padding: 10px;
 	  padding-right: 30px;
@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6, p, a, li, span {
 	  position: absolute;
 	  right: 8px;
 	  top: 50%;
-	  color: $cor-pri;
+	  color: up-colors('primary');
 	  z-index: 1;
 	  font-size: 22px;
 	  line-height: 10%;
@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, h6, p, a, li, span {
 	}
 	
 	a {
-		color: $cor-pri;
+		color: up-colors('primary');
 		&:hover { text-decoration: underline; }
 	}
 	

@@ -26,14 +26,14 @@
           align-items: center;
           width: 40px;
           height: 40px;
-          background-color: $cor-seg;
-          border: 1px solid $cor-seg;
-          color: $cor-pri;
+          background-color: up-colors('secondary');
+          border: 1px solid up-colors('secondary');
+          color: up-colors('primary');
           @include radius(50%);
 
           &:hover {
             background-color: transparent;
-            color: $cor-seg;
+            color: up-colors('secondary');
           }
         }
       }
@@ -77,14 +77,14 @@
 
       &:focus {
         outline: none;
-        border-color: $sec-color;
+        border-color: up-colors('secondary');
       }
     }
 
     button {
       display: flex;
       justify-content: flex-end;
-      font-family: $fir-font;
+      font-family: $font-pri;
       cursor: pointer;
       margin-left: auto;
       margin-right: 15px;
@@ -104,7 +104,7 @@
         content: '';
         width: 85px;
         height: 10px;
-        background-color:$fir-color;
+        background-color: up-colors('primary');
         top: 0;
         bottom: 0;
         left: -20px;
@@ -139,7 +139,7 @@
       
             &:checked + .wpcf7-list-item-label::before {
               content: "\f0c8";
-              color: $sec-color;
+              color: up-colors('secondary');
               font-size: 12px;
               font-family: FontAwesome;
               font-style: normal;
@@ -162,7 +162,7 @@
         
             &::before {
               background: white;
-              border: 1px solid $sec-color;
+              border: 1px solid up-colors('secondary');
               border-radius: 3px;
               content: "";
               height: 15px;
@@ -208,8 +208,8 @@
             float: right;
             padding: 9px 10px;
             margin: 10px 15px 10px 0;
-            background-color: $cor-pri;
-            border: 1px solid $cor-pri;
+            background-color: up-colors('primary');
+            border: 1px solid up-colors('primary');
             @include radius(4px);
             
             .icon-bar {
@@ -229,7 +229,7 @@
             li {
               a {
                 font-family: $font-pri;
-                color: $cor-pri;
+                color: up-colors('primary');
                 @include font(16px);
               }
             }

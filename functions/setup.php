@@ -16,6 +16,7 @@ function upcode_loadJS(){
 		wp_enqueue_script('slick',					'//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js', ['jquery']);
 		wp_enqueue_script('fontawesome',		'//use.fontawesome.com/releases/v5.0.8/js/all.js', ['jquery']);
 		wp_enqueue_script('v4-shims',				'//use.fontawesome.com/releases/v5.0.8/js/v4-shims.js', ['jquery']);
+		wp_enqueue_script('bsnac',					'//rawgit.com/fitodac/bsnav/master/dist/bsnav.min.js', ['jquery']);
 
 		wp_enqueue_script('offcanvas',		$js . 'bootstrap.offcanvas.min.js', ['jquery']);
 		wp_enqueue_script('acf-maps', 		$js . 'maps.js', ['jquery']);
@@ -31,6 +32,7 @@ add_action( 'wp_print_scripts', 'upcode_loadJS' );
 function upcode_loadCSS(){
 	$css = get_template_directory_uri() . '/assets/css/';
 	wp_enqueue_style( 'offcanvas', 			$css . '_bootstrap.offcanvas.css' );
+	wp_enqueue_style( 'bsnac', 					'//rawgit.com/fitodac/bsnav/master/dist/bsnav.min.css' );
 	wp_enqueue_style( 'fancybox', 			'//cdn.rawgit.com/fancyapps/fancybox/60c37246/dist/jquery.fancybox.min.css' );
 	wp_enqueue_style( 'slick', 					'//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css' );
 	wp_enqueue_style( 'slick-theme', 		'//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css' );
