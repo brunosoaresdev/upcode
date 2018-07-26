@@ -1,6 +1,6 @@
 <?php
 
-// Adiciona tamanho de thumbs customizáveis
+// add custom thumb sizes
 	add_action('init', 'add_custom_image_sizes');
   function add_custom_image_sizes() {
     add_image_size('slide', 1920, 450, true);

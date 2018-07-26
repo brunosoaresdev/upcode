@@ -1,5 +1,5 @@
 <?php 
-  $location = get_field('map_info');
+  $location = get_field('map_info', get_option('page_on_front'));
   if( !empty($location) ):
 ?>
   <div class="acf-map">

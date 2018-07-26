@@ -50,7 +50,7 @@
       padding: 10px;
       border-color: red !important;
       text-align: center;
-      font-family: $sec-font;
+      font-family: $font-pri;
       background-color: red;
       border-color: red;
       color: white;
@@ -77,7 +77,7 @@
 
       &:focus {
         outline: none;
-        border-color: up-colors('secondary');
+        border-color: up-colors('primary');
       }
     }
 
@@ -139,7 +139,7 @@
       
             &:checked + .wpcf7-list-item-label::before {
               content: "\f0c8";
-              color: up-colors('secondary');
+              color: up-colors('primary');
               font-size: 12px;
               font-family: FontAwesome;
               font-style: normal;
@@ -152,7 +152,7 @@
 
           .wpcf7-list-item-label {
             display: inline-block;
-            font-family: $sec-font;
+            font-family: $font-pri;
             font-weight: normal;
             left: 0px;
             line-height: 14px;
@@ -162,7 +162,7 @@
         
             &::before {
               background: white;
-              border: 1px solid up-colors('secondary');
+              border: 1px solid up-colors('primary');
               border-radius: 3px;
               content: "";
               height: 15px;
@@ -193,44 +193,71 @@
 /* ----------------------------------------- */
   header {
     &#header {
-      .logotipo {
-        img {}
-      }
-
-      nav#navbar {
+      nav.navbar {
         position: relative;
         margin: 0;
         padding: 0;
-        
-        .navbar-header {
-          .navbar-toggle {
-            position: relative;
-            float: right;
-            padding: 9px 10px;
-            margin: 10px 15px 10px 0;
-            background-color: up-colors('primary');
-            border: 1px solid up-colors('primary');
-            @include radius(4px);
-            
-            .icon-bar {
-              display: block;
-              width: 22px;
-              height: 2px;
-              @include radius(1px);
+
+        button {
+          border: 3px solid up-colors('first');
+          padding: 5px;
+          width: 45px;
+          height: 40px;
+          @include radius(5px);
+
+          &:focus {
+            outline: none;
+          }
+
+          span {
+            width: 75%;
+            top: 4px;
+            background-color: up-colors('first');;
+
+            &::after,
+            &::before {
+              background-color: up-colors('first');;
             }
-            .icon-bar + .icon-bar { margin-top: 4px; }
+          }
+
+          &.active {
+            span {
+              background-color: transparent;
+            }
           }
         }
         
-        .navbar-offcanvas {
+        .navbar-collapse {
           width: 100%;
         
           ul {
             li {
               a {
+                display: flex;
+                align-items: center;
+                padding: 20px;
                 font-family: $font-pri;
-                color: up-colors('primary');
+                color: up-colors('first');
+                text-transform: uppercase;
                 @include font(16px);
+                @include bold();
+
+                .caret {
+                  border-top-color: up-colors('first');
+                }
+              }
+
+              ul.navbar-nav {
+                @include radius(0);
+
+                li {
+                  a {
+                    .caret {
+                      border-top-color: transparent;
+                      border-left-color: up-colors('first');
+                    }
+                  }
+                }
               }
             }
           }
@@ -243,7 +270,20 @@
 /* slideshow */
 /* ----------------------------------------- */
   #slideshow {
-    .banner {}
+    .banner-mask {
+      display: flex;
+      align-items: center;
+      min-height: 450px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      
+      > .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   }
 /* ----------------------------------------- slideshow */
 

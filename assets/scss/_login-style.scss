@@ -1,16 +1,8 @@
 @import "upcode-mixins";
 
 body.login {
-  background-color: theme-color("primary");
+  background-color: up-colors("primary");
   
-  h1 {
-    a {
-      width: 320px !important;
-      height: 93px !important;
-      margin: 80px auto 5px;
-    }
-  }
-
   #loginform {
     background: rgba(255, 255, 255, 0.5);
     border: none;
@@ -30,34 +22,28 @@ body.login {
     
     #wp-submit {
       border: none;
-      background: theme-color("primary") !important;
+      background: up-colors("primary") !important;
       box-shadow: none;
       padding: 0 20px;
       text-shadow: none;
     }
-  } // #loginform
+  }
 
   #nav,
   #backtoblog {
-    color: white !important;
+    color: black !important;
     text-align: center;
     padding-left: 0;
     
     a {
-      color: white !important;
+      color: black !important;
       text-decoration: none;
       text-shadow: none;
     
       &:hover {
-        color: white !important;
+        color: black !important;
         text-decoration: underline;
       }
-    }
-  }
-
-  .button {
-    &.button-primary {
-      background-color: theme-color("primary");
     }
   }
 }

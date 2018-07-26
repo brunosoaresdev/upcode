@@ -11,47 +11,20 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="<?php bloginfo('description'); ?>">
-
-		<!-- google maps -->
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1P-H_fyEh6IaGS_mdIAPnMUIiQhKON2s"></script>
-    <?php
-			if ( is_singular() && get_option( 'thread_comments' ) )
-				wp_enqueue_script( 'comment-reply' );
-			wp_head();
-		?>
+    <?php wp_head(); ?>
 	</head>
 	<body <?php body_class('body-offcanvas'); ?>>
 
     <header id="header">
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3 col-9 order-1 order-md-0">
             <a class="logotipo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
               <img src="<?php echo get_field('logotipo', get_option( 'page_on_front' )); ?>" class="img-fluid" />
             </a>
           </div>
-          <div class="col-md-9">
-            <?php get_template_part('partials/_social-links'); ?>
-            <nav class="navbar navbar-expand-lg bsnav bsnav-light">
-              <button class="navbar-toggler toggler-spring"><span class="navbar-toggler-icon"></span></button>
-              <?php
-                wp_nav_menu([
-                  'menu'            => 'principal',
-                  'theme_location'  => 'top',
-                  'container'       => 'div',
-                  'container_class' => 'collapse navbar-collapse justify-content-md-end',
-                  'menu_id'         => false,
-                  'menu_class'      => 'navbar-nav navbar-mobile mr-0',
-                  'depth'           => 3,
-                  'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
-                  'walker'          => new wp_bootstrap_navwalker()
-                ]);
-              ?>
-            </nav>
-            <div class="bsnav-mobile">
-              <div class="bsnav-mobile-overlay"></div>
-              <div class="navbar"></div>
-            </div>
+          <div class="col-md-9 col-3 order-0 order-md-1">
+            <? get_template_part( 'templates/partials/_nav' ); ?>
           </div>
         </div>
       </div>

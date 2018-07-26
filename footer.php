@@ -11,14 +11,7 @@
  */
 ?>
 	
-	<?php 
-		$location = get_field('map_info');
-		if( !empty($location) ):
-	?>
-		<div class="acf-map">
-			<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
-		</div>
-	<?php endif; ?>
+	<?php get_template_part( 'templates/partials/_map' ); ?>
 
 	<footer id="footer" role="contentinfo">
 		<div class="container">
@@ -29,12 +22,12 @@
 					</a>
 				</div>
 			</div>
-			<p>© Copyright <?php echo date('Y') ?> - <?php bloginfo( 'name' ); ?> - Todos direitos reservados.</p>
 		</div>
 
 		<div class="footer-txt">
-			<div class="container">
-				<?php get_template_part( 'partials/_assinatura-upcode' ); ?>
+			<div class="container d-flex justify-content-between align-itens-center">
+				<p>© Copyright <?php echo date('Y') ?> - <?php bloginfo( 'name' ); ?> - Todos direitos reservados.</p>
+				<?php get_template_part( 'templates/partials/_signature' ); ?>
 			</div>
 		</div>
 	</footer>

@@ -46,7 +46,7 @@
     );
     register_post_type( 'produto', $args );
 
-    // Registrando Taxonomia
+    // register custom taxonomy
     $labels = array(
       'name' => _x( 'Categorias produtos', 'taxonomy general name' ),
       'singular_name' => _x( 'Tag', 'taxonomy singular name' ),

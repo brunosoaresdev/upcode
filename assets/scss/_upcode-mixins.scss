@@ -3,14 +3,17 @@
 	$font-pri:    '', sans-serif;
 
 	$up-colors: (
-		primary: transparent,
-		secondary: transparent,
+		first: transparent,
+		second: transparent,
+		third: transparent,
+		fourth: transparent,
+		fifth: transparent
 	) !default;
 /* ----------------------------------------- variables */
 
 /* Functions */
 /* ----------------------------------------- */
-	@function up-colors($key: "primary") {
+	@function up-colors($key: "first") {
 		@return map-get($up-colors, $key);
 	}
 
