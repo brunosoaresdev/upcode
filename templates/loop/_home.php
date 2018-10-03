@@ -2,6 +2,6 @@
 
 <main id="content" role="main">
 	<div class="container">
-		<?= 'Home'; ?>
+ 
 	</div>
 </main>
