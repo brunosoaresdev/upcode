@@ -9,7 +9,7 @@
     add_filter('login_headertitle', 'wpmidia_custom_wp_login_title');
     
     function wpmidia_custom_login() {
-      echo '<link media="all" type="text/css" href="'.get_template_directory_uri().'/assets/css/login-style.css" rel="stylesheet">';
+      echo '<link media="all" type="text/css" href="'.get_template_directory_uri().'/assets/css/_login-style.css" rel="stylesheet">';
       $logotipoID = get_post_meta(get_option( 'page_on_front' ), 'logotipo', 1);
       if ($logotipoID) {
       ?>
@@ -58,7 +58,7 @@
   /* Load CSS files into Admin
   /* ----------------------------------------- */
     function load_custom_wp_admin_style() {
-      wp_register_style( 'custom_wp_admin_css', get_bloginfo( 'stylesheet_directory' ) . '/assets/css/admin-style.css', false, '1.0.0' );
+      wp_register_style( 'custom_wp_admin_css', get_bloginfo( 'stylesheet_directory' ) . '/assets/css/_admin-style.css', false, '1.0.0' );
       wp_enqueue_style( 'custom_wp_admin_css' );
     }
     add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
