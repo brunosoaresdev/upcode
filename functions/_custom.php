@@ -51,7 +51,7 @@
 
     
   // get url of image
-  function images_url($file) { echo get_stylesheet_directory_uri() . '/assets/images/'. $file; }
+  function images_url($file,$show=true) {if($show): echo get_stylesheet_directory_uri() . '/assets/images/'. $file; else: return get_stylesheet_directory_uri() . '/assets/images/'. $file; endif; }
 
   // get url of image
   function get_images_url($file) { return get_stylesheet_directory_uri() . '/assets/images/'. $file; }

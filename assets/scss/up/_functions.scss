@@ -1,0 +1,77 @@
+$font-pri: 'Source Sans Pro', sans-serif;
+$font-seg: 'Proxima Nova', sans-serif;
+$font-ter: 'Proxima Nova Alt', sans-serif;
+$font-qua: 'NewParis Headline', sans-serif;
+
+$up-colors: (
+  first: black,
+  second: #5B5A5A,
+  third: #D2AB67,
+  fourth: #F5C4C4,
+  fifth: transparent,
+  six: #DEDEDE,
+  sev: #F3F3F3,
+) !default;
+
+$up-fonts: (
+  first: 'Source Sans Pro',
+  second: 'Proxima Nova',
+  third: 'Proxima Nova Alt',
+  fourth:'NewParis Headline'
+) !default;
+
+@mixin h1() { font-size: $h1-font-size; }
+@mixin h2() { font-size: $h2-font-size; }
+@mixin h3() { font-size: $h3-font-size; }
+@mixin h4() { font-size: $h4-font-size; }
+@mixin h5() { font-size: $h5-font-size; }
+@mixin h6() { font-size: $h6-font-size; }
+
+@mixin thin()   	{ font-weight: 100;}
+@mixin elight()   { font-weight: 200;}
+@mixin light()  	{ font-weight: 300;}
+@mixin normal()  	{ font-weight: 400;}
+@mixin medium()   { font-weight: 500;}
+@mixin semi()    	{ font-weight: 600;}
+@mixin bold()    	{ font-weight: 700;}
+@mixin ebold()    { font-weight: 800;}
+@mixin black()   	{ font-weight: 900;}
+
+@function up-colors($key: "first") {
+  @return map-get($up-colors, $key);
+}
+@function up-fonts($key: "first") {
+  @return map-get($up-fonts, $key);
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin font($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin radius($px) {
+  -webkit-border-radius: $px;
+      -moz-border-radius: $px;
+      -ms-border-radius: $px;
+          border-radius: $px;
+}
+
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+@mixin columns($qtd: 2) {
+  @include media-breakpoint-down(sm) {
+    -webkit-column-count: $qtd; /* Chrome, Safari, Opera */
+    -moz-column-count: $qtd; /* Firefox */
+    column-count: $qtd;
+  }
+}

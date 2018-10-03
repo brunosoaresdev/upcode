@@ -1,5 +1,20 @@
 <?php
-
+function html5_insert_image($html, $id, $caption, $title, $align, $url, $size) {
+	$src = wp_get_attachment_image_src( $id, $size, false );
+	$srclarge = wp_get_attachment_image_src( $id, 'large', false );
+	$srcmedium = wp_get_attachment_image_src( $id, 'medium', false );
+	$srcsmall = wp_get_attachment_image_src( $id, 'thumbnail', false );
+	$html5 = "<figure id='post-$id media-$id' class='align$align'>";
+	$html5 .= "<img src='$src[0]' srcset='";
+	$html5 .= "$srcsmall[0] 320w, ";
+	$html5 .= "$srcmedium[0] 640w, ";
+	$html5 .= "$srclarge[0] 1100w";
+	$html5 .= "' alt='$title' />";
+	$html5 .= "<figcaption>$caption</figcaption>";
+	$html5 .= "</figure>";
+	return $html5;
+}
+add_filter( 'image_send_to_editor', 'html5_insert_image', 10, 9 );
 	/* load js files */
 	/* ----------------------------------------- */
 		function upcode_loadJS(){
@@ -20,6 +35,7 @@
 				wp_enqueue_script('maps', '//maps.googleapis.com/maps/api/js?key=AIzaSyB1P-H_fyEh6IaGS_mdIAPnMUIiQhKON2s', ['jquery']);
 
 				wp_enqueue_script('acf-maps', $js . 'maps.js', ['jquery']);
+				wp_enqueue_script('isotope', 'https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js', ['jquery']);
 				wp_enqueue_script('mask', $js . 'jquery.mask.min.js', ['jquery']);
 				wp_enqueue_script('codigo', $js . 'codigo.js', ['jquery']);
 			}
@@ -36,7 +52,8 @@
 			wp_enqueue_style( 'slick', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css' );
 			wp_enqueue_style( 'slick-theme', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css' );
 			wp_enqueue_style( 'slick-loader', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/ajax-loader.gif' );
-			wp_enqueue_style( 'awesome', '//use.fontawesome.com/releases/v5.0.6/css/all.css' );
+			wp_enqueue_style( 'fontawesome', '//use.fontawesome.com/releases/v5.0.6/css/all.css' );
+
 		}
 		add_action('wp_enqueue_scripts', 'upcode_loadCSS');
 	/* ----------------------------------------- load css files */
@@ -52,6 +69,10 @@
 					'global' => __( 'Navegação Global', 'partner-programmer' ),
 					'local' => __( 'Navegação Local', 'partner-programmer' ),
 				) );
+				register_nav_menu('institucional',__( 'Institucional Rodapé' ));
+				register_nav_menu('categorias',__( 'Categorias Rodapé' ));
+
+
 			}
 		endif;
 	/* ------------------ warn wordpress to run the function upcode_setup() when 'after_setup_theme' hook run */
@@ -119,4 +140,14 @@
 				}
 			}
 		}
+
+
+// Add Shortcode
+function getAddress() {
+			$html = '';
+			$html .= '<span class="addr">'.get_field('address_info',get_option('page_on_front')).'</span>';
+			$html .= '<span class="mask-phone phone-mask">'.get_field('phone_info',get_option('page_on_front')).'</span>';
+			return $html;
+}
+add_shortcode( 'address_info', 'getAddress' );
 	/* ----------------------------------------- create pages on start theme */
