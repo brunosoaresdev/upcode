@@ -1,4 +1,4 @@
-<?php
+<?
 
 	/* load js files */
 	/* ----------------------------------------- */
@@ -21,7 +21,7 @@
 
 				wp_enqueue_script('acf-maps', $js . 'maps.js', ['jquery']);
 				wp_enqueue_script('mask', $js . 'jquery.mask.min.js', ['jquery']);
-				wp_enqueue_script('codigo', $js . 'codigo.js', ['jquery']);
+				wp_enqueue_script('main', $js . 'main.js', ['jquery']);
 			}
 		}
 		add_action( 'wp_print_scripts', 'upcode_loadJS' );

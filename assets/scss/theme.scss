@@ -1,0 +1,120 @@
+@import "bootstrap/functions";
+@import "bootstrap/mixins";
+@import "bootstrap/variables";
+@import "up/functions";
+@import "up/main";
+
+/* header */
+/* ----------------------------------------- */
+  header {
+    &#header {
+      nav.navbar {
+        position: relative;
+        margin: 0;
+        padding: 0;
+
+        button {
+          border: 3px solid up-colors('first');
+          padding: 5px;
+          width: 45px;
+          height: 40px;
+          @include radius(5px);
+
+          &:focus {
+            outline: none;
+          }
+
+          span {
+            width: 75%;
+            top: 4px;
+            background-color: up-colors('first');;
+
+            &::after,
+            &::before {
+              background-color: up-colors('first');;
+            }
+          }
+
+          &.active {
+            span {
+              background-color: transparent;
+            }
+          }
+        }
+        
+        .navbar-collapse {
+          width: 100%;
+        
+          ul {
+            li {
+              a {
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                font-family: up-fonts('first');
+                color: up-colors('first');
+                text-transform: uppercase;
+                @include font(16px);
+                @include bold();
+
+                .caret {
+                  border-top-color: up-colors('first');
+                }
+              }
+
+              ul.navbar-nav {
+                @include radius(0);
+
+                li {
+                  a {
+                    .caret {
+                      border-top-color: transparent;
+                      border-left-color: up-colors('first');
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+/* ----------------------------------------- header */
+
+/* slideshow */
+/* ----------------------------------------- */
+  #slideshow {
+    .banner-mask {
+      display: flex;
+      align-items: center;
+      min-height: 450px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      
+      > .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+/* ----------------------------------------- slideshow */
+
+/* content */
+/* ----------------------------------------- */
+  main#content {
+    article.page {
+      &.index {}
+      &.single {}
+    }
+  }
+/* ----------------------------------------- content */
+
+/* footer */
+/* ----------------------------------------- */
+  footer {
+    &#footer {}
+  }
+/* ----------------------------------------- footer */

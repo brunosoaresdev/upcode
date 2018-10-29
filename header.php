@@ -14,7 +14,35 @@
     <?php wp_head(); ?>
 	</head>
 	<body <?php body_class('body-offcanvas'); ?>>
+    <style>
+      .preloader{
+        position: fixed;
+        top:0;
+        left:0;
+        bottom: 0;
+        right: 0;
+        background: white;
+        z-index: 99999;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+      }
 
+      .preloader .preloader-gif{
+        width: 180px;
+        height: 180px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background: url(<?=get_template_directory_uri();?>/assets/images/prelaoder.gif) no-repeat;
+        background-size: cover;
+      }
+    </style>
+    <div class="preloader"><span class="preloader-gif"></span></div>
+    <h1 class="d-none"><?php bloginfo( 'name' ); ?> | <?php bloginfo( 'description' ); ?></h1>
     <header id="header">
       <div class="container">
         <div class="row">
