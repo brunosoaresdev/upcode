@@ -41,7 +41,12 @@
         background-size: cover;
       }
     </style>
-    <div class="preloader"><span class="preloader-gif"></span></div>
+    <div class="preloader">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
     <h1 class="d-none"><?php bloginfo( 'name' ); ?> | <?php bloginfo( 'description' ); ?></h1>
     <header id="header">
       <div class="container">

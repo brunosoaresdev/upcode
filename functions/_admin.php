@@ -58,7 +58,7 @@
   /* Load CSS files into Admin
   /* ----------------------------------------- */
     function load_custom_wp_admin_style() {
-      wp_register_style( 'custom_wp_admin_css', get_bloginfo( 'stylesheet_directory' ) . '/assets/css/_admin-style.css', false, '1.0.0' );
+      wp_register_style( 'custom_wp_admin_css', get_bloginfo( 'stylesheet_directory' ) . '/assets/css/admin-style.css', false, '1.0.0' );
       wp_enqueue_style( 'custom_wp_admin_css' );
     }
     add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
