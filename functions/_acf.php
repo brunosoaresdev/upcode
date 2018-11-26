@@ -1,6 +1,6 @@
 <?php
 
-  class ACF {
+  class ACFUP {
 
     function __construct() {
       add_action('acf/init', [$this, 'api_maps']);
