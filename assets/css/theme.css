@@ -472,9 +472,9 @@ form#search-box {
   .gallery figure {
     flex: 0 0 23%;
     max-width: 23%;
-    margin: 0 2%;
+    margin: 0 2% 20px;
     cursor: pointer; }
-    .gallery figure:first-child, .gallery figure:nth-child(4n), .gallery figure:nth-child(5n) {
+    .gallery figure:first-child, .gallery figure:nth-child(4n), .gallery figure:nth-child(4n + 1) {
       margin: 0; }
 
 *,
