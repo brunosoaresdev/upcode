@@ -199,7 +199,7 @@
       return '<ul class="pagination" role="navigation">'.$out.'</ul>';
   }
   add_filter( 'wp_pagenavi', 'wiaw_pagenavi_to_bootstrap', 10, 2 );
-  /* ----------------------------------------- WP_PAGENAVI with Bootstrap */ 
+  /* ---------- WP_PAGENAVI with Bootstrap */ 
 
   /* remove width fixed the images with subtitle on .hentry */
   /* ----------------------------------------- */
