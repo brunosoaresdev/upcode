@@ -10,16 +10,16 @@
 				wp_enqueue_script('jquery');
 
 				$js = get_template_directory_uri() . '/assets/js/';
-				wp_enqueue_script('propper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js', ['jquery']);
-				wp_enqueue_script('bootstrap-min', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js', ['jquery','propper']);
+				wp_enqueue_script('propper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js', ['jquery']); 
 				wp_enqueue_script('fancybox', '//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js', ['jquery']);
 				wp_enqueue_script('slick', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js', ['jquery']);
 				wp_enqueue_script('fontawesome', '//use.fontawesome.com/releases/v5.0.8/js/all.js', ['jquery']);
 				wp_enqueue_script('v4-shims', '//use.fontawesome.com/releases/v5.0.8/js/v4-shims.js', ['jquery']);
-				wp_enqueue_script('bsnac', '//rawgit.com/fitodac/bsnav/master/dist/bsnav.min.js', ['jquery']);
 				wp_enqueue_script('maps', '//maps.googleapis.com/maps/api/js?key=AIzaSyB1P-H_fyEh6IaGS_mdIAPnMUIiQhKON2s', ['jquery']);
 
 				wp_enqueue_script('acf-maps', $js . 'maps.js', ['jquery']);
+				wp_enqueue_script('bootstrap-js', $js . 'bootstrap.min.js', ['jquery','propper']);
+				wp_enqueue_script('bsnav', $js . 'bsnav.min.js', ['jquery']);
 				wp_enqueue_script('mask', $js . 'jquery.mask.min.js', ['jquery']);
 				wp_enqueue_script('main', $js . 'main.js', ['jquery']);
 			}
@@ -33,10 +33,7 @@
 			$css = get_template_directory_uri() . '/assets/css/';
 			wp_enqueue_style( 'bsnac', '//rawgit.com/fitodac/bsnav/master/dist/bsnav.min.css' );
 			wp_enqueue_style( 'fancybox', '//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css' );
-			wp_enqueue_style( 'slick', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css' );
-			wp_enqueue_style( 'slick-theme', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css' );
-			wp_enqueue_style( 'slick-loader', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/ajax-loader.gif' );
-			wp_enqueue_style( 'awesome', '//use.fontawesome.com/releases/v5.0.6/css/all.css' );
+			wp_enqueue_style( 'f-awesome', '//use.fontawesome.com/releases/v5.0.6/css/all.css' );
 		}
 		add_action('wp_enqueue_scripts', 'upcode_loadCSS');
 	/* ----------------------------------------- load css files */

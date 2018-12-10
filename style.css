@@ -11,5 +11,4 @@ Don't add css in this file!
 The theme css is in assets/css/_style.css
 */
 
-@import "assets/css/bootstrap.css";
 @import "assets/css/theme.css";
