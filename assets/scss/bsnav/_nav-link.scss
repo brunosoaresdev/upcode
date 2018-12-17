@@ -16,7 +16,7 @@
 	@include media-breakpoint-up('sm'){
 		&:after{
 			content: " ";
-			border-left: 1px solid #567b93;
+			border-left: 1px solid transparent; // borda no after
 			height: 38px;
 			position: absolute;
 			right: 0;
@@ -27,7 +27,7 @@
 	}
 
 	&:hover{
-		border-bottom: 2px solid $yellow;
+		border-bottom: 0px solid transparent;
 	}
 	.caret {
 		border-top-color: up-colors('second');

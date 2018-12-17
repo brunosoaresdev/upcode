@@ -90,30 +90,32 @@
 				return false;
 			}
 		}
-
-		$paginas = [
-			// [Title, Content, 'Slug']
-			['Home', '', 'home'],
-			['Blog', '', 'blog'],
-			['Institucional', '', 'institucional'],
-			['Contato', '', 'contato'],
-		];
-		// Cria as páginas
-		if (isset($_GET['activated']) && is_admin()){
-			foreach ($paginas as $pagina) {
-				$page_check = get_page_by_title($pagina[0]);
-				if(!isset($page_check->ID) && !the_slug_exists($pagina[2])){
-						$newPageId = wp_insert_post(array(
-							'post_type' => 'page',
-							'post_title' => $pagina[0],
-							'post_content' => $pagina[1],
-							'post_status' => 'publish',
-							'post_author' => 1,
-							'post_slug' => $pagina[2]
-						));
-						if ($pagina[0] == 'Home') { update_option( 'page_on_front', $newPageId ); update_option( 'show_on_front', 'page' ); }
-						if ($pagina[0] == 'Blog') { update_option( 'page_for_posts', $newPageId ); }
+		function createPagesifNotExists(){
+			$paginas = [
+				// [Title, Content, 'Slug']
+				['title'=>'Home', 'content'=>'', 'slug'=>'home'],
+				['title'=>'Blog', 'content'=>'', 'slug'=>'blog'],
+				['title'=>'Institucional', 'content'=>'', 'slug'=>'institucional'],
+				['title'=>'Contato', 'content'=>'', 'slug'=>'contato'],
+			]; 
+				foreach ($paginas as $pagina) {
+					$page_check = get_page_by_title($pagina['title']);
+					if(!isset($page_check->ID) && !the_slug_exists($pagina['slug'])){
+							$newPageId = wp_insert_post(array(
+								'post_type' => 'page',
+								'post_title' => $pagina['title'],
+								'post_content' => $pagina['content'],
+								'post_status' => 'publish',
+								'post_author' => 1,
+								'post_slug' => $pagina['slug']
+							));
+							if ($pagina['title'] == 'Home') {
+						 		update_option( 'page_on_front', $newPageId ); update_option( 'show_on_front', 'page' ); }
+							if ($pagina['title'] == 'Blog') { update_option( 'page_for_posts', $newPageId ); }
+					}
 				}
-			}
 		}
+		add_action('after_setup_theme','createPagesifNotExists');
+
+	 
 	/* ----------------------------------------- create pages on start theme */
