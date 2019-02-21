@@ -1,6 +1,8 @@
 <?php
-use AcfUp;
+use App\AcfUp;
+
 require_once ('vendor/autoload.php'); // uncomment this line if you want to use composer
+//WP_Dependency_Installer::instance()->run( __DIR__ );
 
 // Defines funcionts of the framework
 require_once ('functions/_setup.php');
@@ -16,5 +18,6 @@ require_once ('functions/_options.php');
 // Register custom post type
 // require_once ('cpt/cpt-product.php');
 if(class_exists('ACF')){
-    $acf = new AcfUp();    
+    $acfInstance = new AcfUp();
+    add_action('acf/init', [$acfInstance, 'api_maps']);
 }

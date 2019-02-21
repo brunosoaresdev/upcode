@@ -5,23 +5,8 @@
 
     function __construct() {
       
-      add_action('acf/init', [$this, 'api_maps']);
-
-      $optionsPage = [
-        'page_title' => 'Opções',
-        'menu_title' => '',
-        'menu_slug' => '',
-        'capability' => 'edit_posts',
-        'position' => 9,
-        'parent_slug' => '',
-        'icon_url' => false,
-        'redirect' => true,
-        'post_id' => 'options',
-        'autoload' => false,
-      ]; 
-      if( function_exists('acf_add_options_page') ) {
-
-      }
+   
+      
     }
     
     /* key acf google maps */
