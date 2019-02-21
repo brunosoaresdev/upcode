@@ -6,7 +6,7 @@ namespace App;
 * Read class
 * @author Upcode
 */
-class Read
+class Reader
 {
     private $first_name;
     public function __construct($first_name)

@@ -5,7 +5,7 @@
     }
   },
   "require": {
-    "nesbot/carbon": "dev-master",
-    "tareq1988/wp-eloquent": "dev-master"
+    "tareq1988/wp-eloquent": "dev-master",
+    "afragen/wp-dependency-installer": "^1.4"
   }
 }

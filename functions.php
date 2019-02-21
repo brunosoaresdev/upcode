@@ -1,5 +1,6 @@
 <?php
-//require_once ('vendor/autoload.php'); // uncomment this line if you want to use composer
+
+require_once ('vendor/autoload.php'); // uncomment this line if you want to use composer
 // Defines funcionts of the framework
 require_once ('functions/_setup.php');
 require_once ('functions/_custom.php');
