@@ -1,21 +1,23 @@
-<?php if( have_rows('repeater_slide',get_option( 'page_on_front' )) ): ?>
+<?php
+global $acfInstance;
+if( have_rows('repeater_slide','options') ): ?>
   <div id="slideshow" class="banner">
-    <?php while ( have_rows('repeater_slide',get_option( 'page_on_front' )) ) : the_row(); ?>
-      <div class="banner-mask" <?php acf_sub_thumbnail_bg('slide_image'); ?>>
-        <div class="container">
-          <?php
-            if( get_sub_field('slide_title') ):
-              echo '<h2>' . get_sub_field('slide_title') . '</h2>';
-            endif;
-            if( get_sub_field('slide_description') ):
-              echo '<p>' . get_sub_field('slide_description') . '</p>';
-            endif;
-            if( get_sub_field('slide_link') ):
-              echo '<a href="' . get_sub_field('slide_link') . '"  class="btn-classic">Ver mais...</a>';
-            endif;
-          ?>
+    <?php while ( have_rows('repeater_slide','options') ) : the_row(); ?>
+    <?php
+         if( get_sub_field('slide_link') ):
+          echo '<a href="' . get_sub_field('slide_link') . '"  class="btn-slide">';
+        endif;
+      ?>
+        <div class="banner-mask" <?php $acfInstance->thumb_bg('slide_image','sub'); ?>>
+          <div class="container">
+      
+          </div>
         </div>
-      </div>
+      <?php
+         if( get_sub_field('slide_link') ):
+          echo '</a>';
+        endif;
+      ?>
     <?php endwhile; ?>
   </div>
 <?php endif; ?>

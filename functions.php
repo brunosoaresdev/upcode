@@ -20,4 +20,5 @@ require_once ('functions/_options.php');
 if(class_exists('ACF')){
     $acfInstance = new AcfUp();
     add_action('acf/init', [$acfInstance, 'api_maps']);
+    add_action('acf/init',[$acfInstance, 'acf_options']);
 }
