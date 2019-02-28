@@ -26,7 +26,7 @@
         <div class="row">
           <div class="col-md-3 col-9 order-1 order-md-0">
             <a class="logotipo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-              <img src="<?php echo get_field('logotipo', get_option( 'page_on_front' )); ?>" class="img-fluid" />
+              <img src="<?php echo get_field('logotipo', 'option'); ?>" class="img-fluid" />
             </a>
           </div>
           <div class="col-md-9 col-3 order-0 order-md-1"><?php _partials('_nav'); ?></div>
