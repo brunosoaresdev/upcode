@@ -5,6 +5,7 @@
 @import "slick";
 @import "slick-theme";
 @import "bsnav/bsnav";
+
 /* header */
 /* ----------------------------------------- */
   header {
@@ -21,24 +22,19 @@
           height: 40px;
           @include radius(5px);
 
-          &:focus {
-            outline: none;
-          }
+          &:focus { outline: none; }
+          
           span {
             width: 75%;
             top: 4px;
-            background-color: up-colors('first');;
+            background-color: up-colors('first');
 
             &::after,
-            &::before {
-              background-color: up-colors('first');;
-            }
+            &::before { background-color: up-colors('first'); }
           }
 
           &.active {
-            span {
-              background-color: transparent;
-            }
+            span { background-color: transparent; }
           }
         }
         
@@ -57,9 +53,7 @@
                 @include font(16px);
                 @include bold();
 
-                .caret {
-                  border-top-color: up-colors('first');
-                }
+                .caret { border-top-color: up-colors('first'); }
               }
 
               ul.navbar-nav {
