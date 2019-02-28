@@ -1,8 +1,24 @@
 [
     {
-        "key": "group_5615778308582",
-        "title": "Logotipo",
+        "key": "group_561578035a638",
+        "title": "Opções do tema",
         "fields": [
+            {
+                "key": "field_5c77df5d510d6",
+                "label": "Aparência",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "left",
+                "endpoint": 0
+            },
             {
                 "key": "field_561577915ca7d",
                 "label": "Insira o logotipo do topo do site:",
@@ -12,7 +28,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": "50",
                     "class": "",
                     "id": ""
                 },
@@ -36,7 +52,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": "50",
                     "class": "",
                     "id": ""
                 },
@@ -50,33 +66,7 @@
                 "max_height": "",
                 "max_size": "",
                 "mime_types": ""
-            }
-        ],
-        "location": [
-            [
-                {
-                    "param": "page_type",
-                    "operator": "==",
-                    "value": "front_page"
-                }
-            ]
-        ],
-        "menu_order": 1,
-        "position": "side",
-        "style": "seamless",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": [
-            "the_content",
-            "featured_image"
-        ],
-        "active": 1,
-        "description": ""
-    },
-    {
-        "key": "group_561578035a638",
-        "title": "Campos gerais",
-        "fields": [
+            },
             {
                 "key": "field_58515e186e93d",
                 "label": "Slideshow",
@@ -113,6 +103,25 @@
                 "button_label": "Adicionar slide",
                 "sub_fields": [
                     {
+                        "key": "field_561576b844bb5",
+                        "label": "Insira o conteúdo:",
+                        "name": "slide_description",
+                        "type": "wysiwyg",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "50",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "all",
+                        "toolbar": "basic",
+                        "media_upload": 0,
+                        "delay": 0
+                    },
+                    {
                         "key": "field_5615763f44bb2",
                         "label": "Insira a imagem:",
                         "name": "slide_image",
@@ -126,7 +135,7 @@
                             "id": ""
                         },
                         "return_format": "url",
-                        "preview_size": "slider-destaque",
+                        "preview_size": "slide",
                         "library": "all",
                         "min_width": "",
                         "min_height": "",
@@ -137,25 +146,6 @@
                         "mime_types": ""
                     },
                     {
-                        "key": "field_5615768044bb3",
-                        "label": "Insira o título:",
-                        "name": "slide_title",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "50",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "maxlength": ""
-                    },
-                    {
                         "key": "field_5615768d44bb4",
                         "label": "Insira o link:",
                         "name": "slide_link",
@@ -164,37 +154,18 @@
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
-                            "width": "50",
+                            "width": "",
                             "class": "",
                             "id": ""
                         },
                         "default_value": "",
                         "placeholder": ""
-                    },
-                    {
-                        "key": "field_561576b844bb5",
-                        "label": "Insira a descrição:",
-                        "name": "slide_description",
-                        "type": "textarea",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "50",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "placeholder": "",
-                        "maxlength": "",
-                        "rows": 3,
-                        "new_lines": "br"
                     }
                 ]
             },
             {
                 "key": "field_5615781729a4c",
-                "label": "Dados da empresa",
+                "label": "Contatos",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -209,8 +180,65 @@
                 "endpoint": 0
             },
             {
+                "key": "field_561578f429a52",
+                "label": "Adicione o telefone:",
+                "name": "phone_info",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Apenas números. Ex.: 6200001111",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5ae5d0637c061",
+                "label": "Adicione o Celular \/ Whatsapp:",
+                "name": "whatsapp_info",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "34",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Apenas números. Ex.: 6200001111",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5615790629a53",
+                "label": "Adicione o e-mail:",
+                "name": "email_info",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
                 "key": "field_561578d429a51",
-                "label": "Informe o endereço:",
+                "label": "Adicione o endereço:",
                 "name": "address_info",
                 "type": "textarea",
                 "instructions": "",
@@ -224,65 +252,8 @@
                 "default_value": "",
                 "placeholder": "",
                 "maxlength": "",
-                "rows": 3,
+                "rows": 4,
                 "new_lines": "br"
-            },
-            {
-                "key": "field_5615790629a53",
-                "label": "Informe o e-mail:",
-                "name": "email_info",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
-                "key": "field_561578f429a52",
-                "label": "Informe o telefone:",
-                "name": "phone_info",
-                "type": "text",
-                "instructions": "Insira apenas números, sem espaço nem parênteses.\r\nEx: 6200000000",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
-                "key": "field_5ae5d0637c061",
-                "label": "Caso queira, informe o Whatsapp:",
-                "name": "whatsapp_info",
-                "type": "text",
-                "instructions": "Insira apenas números, sem espaço nem parênteses.\r\nEx: 6200000000",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
             },
             {
                 "key": "field_5615791829a54",
@@ -293,7 +264,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": "50",
                     "class": "",
                     "id": ""
                 },
@@ -1033,7 +1004,8 @@
                             "fa-youtube": "&#xf167; youtube",
                             "fa-youtube-play": "&#xf16a; youtube-play",
                             "fa-youtube-square": "&#xf166; youtube-square"
-                        }
+                        },
+                        "default_label": ""
                     },
                     {
                         "key": "field_561578a229a50",
@@ -1057,22 +1029,19 @@
         "location": [
             [
                 {
-                    "param": "page_type",
+                    "param": "options_page",
                     "operator": "==",
-                    "value": "options"
+                    "value": "acf-options-opcoes"
                 }
             ]
         ],
-        "menu_order": 3,
+        "menu_order": 0,
         "position": "normal",
         "style": "default",
         "label_placement": "top",
         "instruction_placement": "label",
-        "hide_on_screen": [
-            "the_content",
-            "featured_image"
-        ],
-        "active": 1,
+        "hide_on_screen": "",
+        "active": true,
         "description": ""
     }
 ]
