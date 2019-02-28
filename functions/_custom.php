@@ -2,6 +2,9 @@
   // suporte of title
   add_theme_support( 'title-tag' );
 
+  function _partials($file) { include UP_PARTIALS_PATH . $file.'.php'; }
+  function _loop($file) { include UP_LOOP_PATH . $file.'.php'; }
+
   /* limit number characters to the_content
   /* mode of use <?= content(10); ?> */
   /* ----------------------------------------- */
