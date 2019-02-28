@@ -1,4 +1,4 @@
-.bsnav-mobile{
+.bsnav-mobile {
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -7,9 +7,7 @@
 	z-index: 49;
 	pointer-events: none;
 
-
-	.bsnav-mobile-overlay{
-		// background: rgba(#000,.3);
+	.bsnav-mobile-overlay {
 		top: 0;
 		left: 0;
 		bottom: 0;
@@ -17,10 +15,9 @@
 		position: fixed;
 		visibility: hidden;
 		pointer-events: none;
-	}//bsnav-mobile-overlay
+	}
 
-
-	.navbar{
+	.navbar {
 		background: $blue;
 		width: 230px;
 		padding: 70px 0 15px;
@@ -33,33 +30,18 @@
 		transform: translate3d(300px,0,0);
 		overflow: auto;
 
-
-
-		&.bsnav-dark{ background: #000; }
-
-	}//navbar
-
+		&.bsnav-dark { background: #000; }
+	}
 
 	@include navbar-nav;
 
-
-
-
-
-
-
-	&.in{
+	&.in {
 		pointer-events: initial;
 
-		.navbar{
-			transform: translate3d(0,0,0);
-		}//navbar
-
-		.bsnav-mobile-overlay{
+		.navbar { transform: translate3d(0,0,0); }
+		.bsnav-mobile-overlay {
 			visibility: visible;
 			pointer-events: initial;
-		}//bsnav-mobile-overlay
-
-	}//in
-
-}//bsnav-mobile
+		}
+	}
+}

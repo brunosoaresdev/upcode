@@ -13,34 +13,7 @@
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <?php wp_head(); ?>
 	</head>
-	<body <?php body_class('body-offcanvas'); ?>>
-    <style>
-      .preloader{
-        position: fixed;
-        top:0;
-        left:0;
-        bottom: 0;
-        right: 0;
-        background: white;
-        z-index: 99999;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-      }
-
-      .preloader .preloader-gif{
-        width: 180px;
-        height: 180px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-        background: url(<?=get_template_directory_uri();?>/assets/images/prelaoder.gif) no-repeat;
-        background-size: cover;
-      }
-    </style>
+	<body <?php body_class(); ?>>
     <div class="preloader">
       <div class="line"></div>
       <div class="line"></div>
@@ -56,9 +29,7 @@
               <img src="<?php echo get_field('logotipo', get_option( 'page_on_front' )); ?>" class="img-fluid" />
             </a>
           </div>
-          <div class="col-md-9 col-3 order-0 order-md-1">
-            <? get_template_part( 'templates/partials/_nav' ); ?>
-          </div>
+          <div class="col-md-9 col-3 order-0 order-md-1"><?php _partials('_nav'); ?></div>
         </div>
       </div>
     </header>

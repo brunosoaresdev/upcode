@@ -1,9 +1,5 @@
-/*---------------------------------------------------------*/
-/*	NAV LINK
-/*---------------------------------------------------------*/
 .navbar-expand-lg .navbar-nav .nav-link,
-.navbar-nav .nav-link{
-
+.navbar-nav .nav-link {
 	color: inherit;
 	padding: 14px 39px;
 	position: relative;
@@ -13,26 +9,19 @@
 	border-bottom: 2px solid transparent;
 	@include transition(0.5s);
 	cursor: pointer;
+	
 	@include media-breakpoint-up('sm'){
 		&:after{
 			content: " ";
-			border-left: 1px solid transparent; // borda no after
+			border-left: 1px solid transparent;
 			height: 38px;
 			position: absolute;
 			right: 0;
 			top: auto;
 			width: 1px;
-
 		}
 	}
 
-	&:hover{
-		border-bottom: 0px solid transparent;
-	}
-	.caret {
-		border-top-color: up-colors('second');
-	}
-}//nav-link
-
-
-
+	&:hover { border-bottom: 0px solid transparent; }
+	.caret { border-top-color: up-colors('second'); }
+}

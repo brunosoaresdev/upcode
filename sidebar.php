@@ -8,7 +8,7 @@
  */
 if ( is_active_sidebar( 'sidebar-principal' ) ) :
 
-	echo '<aside id="sidebar" class="col-md-4">';
+	echo '<aside id="sidebar">';
 		dynamic_sidebar( 'sidebar-principal' );
 	echo '</aside>';
 

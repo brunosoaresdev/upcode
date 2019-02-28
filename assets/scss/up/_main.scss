@@ -1,110 +1,3 @@
-.btn-classic {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: up-fonts('second');
-  max-width: 150px;
-  margin: 10px 0 0;
-  padding: 15px 0;
-  color: white;
-  background: up-colors('first');
-  border: 1px solid up-colors('first');
-  cursor: pointer;
-  letter-spacing: 3px;
-  @include font(14px);
-  &:focus { outline: none; }
-  &:hover {
-    background-color: transparent;
-    color: up-colors('first');
-  }
-
-  &.woo {
-    max-width: 180px;
-    @include font(24px);
-
-    &:hover {
-      background-color: up-colors('first');
-      color: white;
-    }
-  }
-  
-  &.gradient {
-    background: linear-gradient(to right, up-colors('first'), up-colors('second'));
-
-    &:hover {
-      background: linear-gradient(to right, up-colors('second'), up-colors('first'));
-      color: white;
-    }
-  }
-  
-  &.gray {
-    background-color: #EBEBEB;
-    border-color: #EBEBEB;
-    color: #9B9B9B;
-    @include font(14px);
-
-    &:hover {
-      background-color: #9B9B9B;
-      border-color: #9B9B9B;
-      color: white;
-    }
-  }
-
-  &.center { margin: 0 auto; }
-  
-  &.rounded {
-    text-transform: uppercase;
-    @include radius(30px !important);
-  }
-}
-
-.b-contact {
-  display: flex;
-  align-items: center;
-  margin: 0 15px 0 0;
-
-  figure {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 47px;
-    height: 47px;
-    margin: 0 10px 0 0;
-    border: 1px solid rgba(up-colors('first'), .5);
-    background-color: transparent;
-    box-shadow: 5px 4px 22px -3px rgba(200, 200, 200, .24);
-    @include radius(50%);
-  }
-
-  .txt {
-    p,
-    a {
-      margin: 0;
-    }
-
-    p {
-      color: up-colors('txt');
-      @include font(12px);
-    }
-
-    a {
-      font-family: up-fonts('second');
-      color: up-colors('second');
-      @include font(18px);
-    }
-  }
-
-  &.widget {
-    margin: 0 0 15px;
-    .txt {
-      p {
-        color: up-colors('second');
-        @include font(14px);
-      }
-    }
-  }
-}
-
 ul {
   &.social-networks {
     display: flex;
@@ -149,61 +42,6 @@ ul {
       }
     }
   }
-
-  &.visitor {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 12px 0;
-
-    li {
-      display: flex;
-      align-items: center;
-      margin: 0 10px 0 0;
-      
-      &:first-child {
-        border-right: 2px solid #9B9B9B;
-        padding-right: 10px;
-      }
-      
-      a {
-        color: #9B9B9B;
-        font-family: up-fonts('second');
-        @include font(13px);
-
-        &:hover { color: up-colors('third'); }
-      }
-
-      &:last-child { margin: 0; }
-    }
-  }
-
-  &.delivery {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    li {
-      flex: 0 0 25%;
-      max-width: 25%;
-      padding: 40px;
-      background-color: rgba(#f1f1f1, .5);
-
-      h3 {
-        font-family: up-fonts('second');
-        margin: 10px 0 20px;
-        @include font(36px);
-      }
-
-      p {
-        color: rgba(black, .55);
-        min-height: 55px;
-        @include font(18px);
-      }
-    }
-  }
 }
 
 form {
@@ -237,26 +75,28 @@ form {
   }
 }
 
-.t-section {
-  font-family: up-fonts('second');
-  margin: 5px 0;
-  color: up-colors('first');
-  text-align: center;
-  @include font(36px);
-}
+.title {
+  &--section {
+    font-family: up-fonts('second');
+    color: up-colors('first');
+    text-align: center;
+    margin: 5px 0;
+    @include font(36px);
+  }
 
-.s-section {
-  text-align: center;
-  color: up-colors('second');
-  margin: 0;
-  @include font(18px);
-}
+  &--sub {
+    text-align: center;
+    color: up-colors('second');
+    margin: 0;
+    @include font(18px);
+  }
 
-.title-widget {
-  font-family: up-fonts('second');
-  color: up-colors('second');
-  margin: 0 0 10px;
-  @include font(18px);
+  &--widget {
+    font-family: up-fonts('second');
+    color: up-colors('second');
+    margin: 0 0 10px;
+    @include font(18px);
+  }
 }
 
 .wpcf7 {
@@ -431,7 +271,6 @@ form {
 	z-index: 2;
 	width: 100%;
 
-
 	select {
     font-family: up-fonts('first');
 	  color: up-colors('second');
@@ -459,8 +298,9 @@ form {
 	}
 	
 	&::after {
-    content: "";
-    font-family: "FontAwesome";
+    content: "\f078";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
 	  position: absolute;
 	  right: 8px;
 	  top: 50%;
@@ -499,6 +339,15 @@ form {
       animation-delay: 540ms;
       background: up-colors('second');
     }
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(2);
   }
 }
 

@@ -1,52 +1,31 @@
-/*---------------------------------------------------------*/
-/*	NAV ITEM
-/*---------------------------------------------------------*/
-.navbar-nav .nav-item{
+.navbar-nav .nav-item {
 	color: white;
-
 	$active: $yellow;
-
 
 	&:hover > .nav-link,
 	&:focus > .nav-link,
 	&:active > .nav-link,
 	&:active:focus > .nav-link,
-	&.active > .nav-link{
+	&.active > .nav-link {
 		color: $active;
-	}//hover, active
+	}
 
-
-
-
-
-	/*------------------------------------------------*/
-	/*	FILL
-	/*------------------------------------------------*/
-	&.nav-item-fill > .nav-link{
-
+	&.nav-item-fill > .nav-link {
 		&:hover > .nav-link,
 		&:focus > .nav-link,
 		&:active > .nav-link,
-		&:active:focus > .nav-link{
+		&:active:focus > .nav-link {
 			background: $active;
 			color: #fff;
-		}// nav-fill
+		}
+	}
 
-	}// nav-link
-
-
-	&.nav-item-fill.active > .nav-link{
+	&.nav-item-fill.active > .nav-link {
 		background: $active;
 		color: #fff;
-	}// nav-fill
+	}
 
-
-
-
-	/*------------------------------------------------*/
-	/*	LINE
-	/*------------------------------------------------*/
-	&.nav-item-line > .nav-link::after{
+	&.nav-item-line > .nav-link::after {
 		content: '';
 		background: $active;
 		width: 0;
@@ -55,32 +34,23 @@
 		bottom: 0;
 		position: absolute;
 		transition: .3s;
-	}//nav-line
-
+	}
 
 	&.nav-item-line > .nav-link:hover,
 	&.nav-item-line > .nav-link:focus,
 	&.nav-item-line > .nav-link:active,
 	&.nav-item-line > .nav-link:active:focus,
-	&.nav-item-line.active > .nav-link{
+	&.nav-item-line.active > .nav-link {
 		color: $active;
 
-		&::after{
+		&::after {
 			width: 100%;
 			left: 0;
-		}//::after
-	}// nav-line
+		}
+	}
 
-
-
-
-
-	/*------------------------------------------------*/
-	/*	DOUBLE LINE
-	/*------------------------------------------------*/
-	&.nav-item-double-line > .nav-link{
-
-		&::before, &::after{
+	&.nav-item-double-line > .nav-link {
+		&::before, &::after {
 			content: '';
 			background: $active;
 			width: 0;
@@ -88,47 +58,30 @@
 			left: 50%;
 			position: absolute;
 			transition: .3s;
-		}//::before / after
+		}
 
-
-		&::before{
-			top: 0;
-		}//::before
-		
-		&::after{
-			bottom: 0;
-		}//::after
-		
-	}//nav-link
-
+		&::before { top: 0; }
+		&::after { bottom: 0; }	
+	}
 
 	&.nav-item-double-line > .nav-link:hover,
 	&.nav-item-double-line > .nav-link:focus,
 	&.nav-item-double-line > .nav-link:active,
 	&.nav-item-double-line > .nav-link:active:focus,
-	&.nav-item-double-line.active > .nav-link{
+	&.nav-item-double-line.active > .nav-link {
 		color: $active;
 
-		&::before, &::after{
+		&::before, &::after {
 			width: 100%;
 			left: 0;
-		}//::before / after
-
+		}
 	}
 
-
-
-
-
-	/*------------------------------------------------*/
-	/*	OUTLINE
-	/*------------------------------------------------*/
-	&.nav-item-outline{
+	&.nav-item-outline {
 		margin-left: 5px;
 
-		> .nav-link{
-
-			&::before, &::after{
+		> .nav-link {
+			&::before, &::after {
 				content: '';
 				background: $active;
 				width: 0;
@@ -137,32 +90,26 @@
 				transition: .3s;
 			}
 
-			&::before{
+			&::before {
 				left: 0;
 				top: 0;
 			}
 
-			&::after{
+			&::after {
 				right: 0;
 				bottom: 0;
 			}
-
-		}// nav-fill-text
-
+		}
 
 		> .nav-link:hover,
 		> .nav-link:focus,
 		> .nav-link:active,
 		> .nav-link:active:focus,
-		&.active > .nav-link{
+		&.active > .nav-link {
 			box-shadow: -2px 0 0 $active inset, 2px 0 0 $active inset;
 
-			&::before, &::after{
-				width: 100%;
-			}
+			&::before,
+			&::after { width: 100%; }
 		}
-
-	}//nav-item-outline
-
-
-}//nav-item
+	}
+}

@@ -1,31 +1,14 @@
-/*------------------------------------------------------------*/
-/*	NAVBAR DARK
-/*------------------------------------------------------------*/
-.bsnav-dark{
+.bsnav-dark {
 	background: #000;
 
-
-	.navbar-nav .nav-item{
-		color: #fff;
-	}//nav-item
-
-	
-	.navbar-toggler .navbar-toggler-icon{
+	.navbar-nav .nav-item { color: #fff; }
+	.navbar-toggler .navbar-toggler-icon {
 		&,
 		&::before,
-		&::after{
-			background-color: #fff;
-		}
-	}//.navbar-toggler
+		&::after { background-color: #fff; }
+	}
 
-
-
-
-
-	.nav-item .caret{
-		border-top-color: #fff;
-	}//caret
-
+	.nav-item .caret { border-top-color: #fff; }
 	.nav-item.dropdown .navbar-nav .nav-link .caret,
 	.nav-item.dropdown.dropdown-right .navbar-nav .nav-link .caret{
 		border-left-color: #fff;
@@ -39,19 +22,8 @@
 		position: relative;
 	}
 	
-
-
-
-
-
-	.nav-item.dropdown > .navbar-nav{
+	.nav-item.dropdown > .navbar-nav {
 		background: #000;
-
-
-		.navbar-nav{
-			background: #000;
-		}//navbar-nav
-
-	}//dropdown > navbar-nav
-
-}//bsnav
+		.navbar-nav { background: #000; }
+	}
+}

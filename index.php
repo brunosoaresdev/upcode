@@ -1,11 +1,11 @@
-<?
+<?php
   get_header();
-  
-    if (is_front_page()) : get_template_part( 'templates/loop/_home' );
-    elseif (is_page()) : get_template_part( 'templates/loop/_page' );
-    elseif (is_single()) : get_template_part( 'templates/loop/_single' );
-    elseif (is_404()) : get_template_part( 'templates/loop/_404' );
-    else : get_template_part( 'templates/loop/_index' );
+  _partials('_start');
+    if (is_front_page()) : _loop('_home');
+    elseif (is_page()) : _loop( '_page' );
+    elseif (is_single()) : _loop( '_single' );
+    elseif (is_404()) : _loop( '_404' );
+    else : _loop( '_index' );
     endif;
-  
+  _partials('_end');
   get_footer();

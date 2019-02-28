@@ -1,7 +1,3 @@
-<?php get_template_part( 'templates/partials/_slideshow' ); ?>
+<?php _partials('_start'); ?>
 
-<main id="content" role="main">
-	<div class="container">
-		<?= 'Home'; ?>
-	</div>
-</main>
+<?php _partials('_end'); ?>

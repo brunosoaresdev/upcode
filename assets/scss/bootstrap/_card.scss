@@ -6,12 +6,29 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 0;
+  min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
   word-wrap: break-word;
   background-color: $card-bg;
   background-clip: border-box;
   border: $card-border-width solid $card-border-color;
   @include border-radius($card-border-radius);
+
+  > hr {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  > .list-group:first-child {
+    .list-group-item:first-child {
+      @include border-top-radius($card-border-radius);
+    }
+  }
+
+  > .list-group:last-child {
+    .list-group-item:last-child {
+      @include border-bottom-radius($card-border-radius);
+    }
+  }
 }
 
 .card-body {
@@ -19,6 +36,7 @@
   // as much space as possible, ensuring footers are aligned to the bottom.
   flex: 1 1 auto;
   padding: $card-spacer-x;
+  color: $card-color;
 }
 
 .card-title {
@@ -26,7 +44,7 @@
 }
 
 .card-subtitle {
-  margin-top: -($card-spacer-y / 2);
+  margin-top: -$card-spacer-y / 2;
   margin-bottom: 0;
 }
 
@@ -44,21 +62,6 @@
   }
 }
 
-.card {
-  > .list-group:first-child {
-    .list-group-item:first-child {
-      @include border-top-radius($card-border-radius);
-    }
-  }
-
-  > .list-group:last-child {
-    .list-group-item:last-child {
-      @include border-bottom-radius($card-border-radius);
-    }
-  }
-}
-
-
 //
 // Optional textual caps
 //
@@ -66,11 +69,18 @@
 .card-header {
   padding: $card-spacer-y $card-spacer-x;
   margin-bottom: 0; // Removes the default margin-bottom of <hN>
+  color: $card-cap-color;
   background-color: $card-cap-bg;
   border-bottom: $card-border-width solid $card-border-color;
 
   &:first-child {
     @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
+  }
+
+  + .list-group {
+    .list-group-item:first-child {
+      border-top: 0;
+    }
   }
 }
 
@@ -90,15 +100,15 @@
 //
 
 .card-header-tabs {
-  margin-right: -($card-spacer-x / 2);
+  margin-right: -$card-spacer-x / 2;
   margin-bottom: -$card-spacer-y;
-  margin-left: -($card-spacer-x / 2);
+  margin-left: -$card-spacer-x / 2;
   border-bottom: 0;
 }
 
 .card-header-pills {
-  margin-right: -($card-spacer-x / 2);
-  margin-left: -($card-spacer-x / 2);
+  margin-right: -$card-spacer-x / 2;
+  margin-left: -$card-spacer-x / 2;
 }
 
 // Card image
@@ -130,18 +140,26 @@
 
 // Card deck
 
-@include media-breakpoint-up(sm) {
-  .card-deck {
-    display: flex;
+.card-deck {
+  display: flex;
+  flex-direction: column;
+
+  .card {
+    margin-bottom: $card-deck-margin;
+  }
+
+  @include media-breakpoint-up(sm) {
     flex-flow: row wrap;
     margin-right: -$card-deck-margin;
     margin-left: -$card-deck-margin;
 
     .card {
       display: flex;
+      // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
       flex: 1 0 0%;
       flex-direction: column;
       margin-right: $card-deck-margin;
+      margin-bottom: 0; // Override the default
       margin-left: $card-deck-margin;
     }
   }
@@ -152,13 +170,24 @@
 // Card groups
 //
 
-@include media-breakpoint-up(sm) {
-  .card-group {
-    display: flex;
-    flex-flow: row wrap;
+.card-group {
+  display: flex;
+  flex-direction: column;
 
-    .card {
+  // The child selector allows nested `.card` within `.card-group`
+  // to display properly.
+  > .card {
+    margin-bottom: $card-group-margin;
+  }
+
+  @include media-breakpoint-up(sm) {
+    flex-flow: row wrap;
+    // The child selector allows nested `.card` within `.card-group`
+    // to display properly.
+    > .card {
+      // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
       flex: 1 0 0%;
+      margin-bottom: 0;
 
       + .card {
         margin-left: 0;
@@ -167,33 +196,33 @@
 
       // Handle rounded corners
       @if $enable-rounded {
-        &:first-child {
+        &:not(:last-child) {
           @include border-right-radius(0);
 
-          .card-img-top {
+          .card-img-top,
+          .card-header {
+            // stylelint-disable-next-line property-blacklist
             border-top-right-radius: 0;
           }
-          .card-img-bottom {
+          .card-img-bottom,
+          .card-footer {
+            // stylelint-disable-next-line property-blacklist
             border-bottom-right-radius: 0;
           }
         }
-        &:last-child {
+
+        &:not(:first-child) {
           @include border-left-radius(0);
 
-          .card-img-top {
+          .card-img-top,
+          .card-header {
+            // stylelint-disable-next-line property-blacklist
             border-top-left-radius: 0;
           }
-          .card-img-bottom {
+          .card-img-bottom,
+          .card-footer {
+            // stylelint-disable-next-line property-blacklist
             border-bottom-left-radius: 0;
-          }
-        }
-
-        &:not(:first-child):not(:last-child) {
-          border-radius: 0;
-
-          .card-img-top,
-          .card-img-bottom {
-            border-radius: 0;
           }
         }
       }
@@ -214,10 +243,47 @@
   @include media-breakpoint-up(sm) {
     column-count: $card-columns-count;
     column-gap: $card-columns-gap;
+    orphans: 1;
+    widows: 1;
 
     .card {
       display: inline-block; // Don't let them vertically span multiple columns
       width: 100%; // Don't let their width change
+    }
+  }
+}
+
+
+//
+// Accordion
+//
+
+.accordion {
+  > .card {
+    overflow: hidden;
+
+    &:not(:first-of-type) {
+      .card-header:first-child {
+        @include border-radius(0);
+      }
+
+      &:not(:last-of-type) {
+        border-bottom: 0;
+        @include border-radius(0);
+      }
+    }
+
+    &:first-of-type {
+      border-bottom: 0;
+      @include border-bottom-radius(0);
+    }
+
+    &:last-of-type {
+      @include border-top-radius(0);
+    }
+
+    .card-header {
+      margin-bottom: -$card-border-width;
     }
   }
 }

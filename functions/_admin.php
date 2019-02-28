@@ -9,7 +9,7 @@
     add_filter('login_headertitle', 'wpmidia_custom_wp_login_title');
     
     function wpmidia_custom_login() {
-      echo '<link media="all" type="text/css" href="'.get_template_directory_uri().'/assets/css/_login-style.css" rel="stylesheet">';
+      echo '<link media="all" type="text/css" href="'.get_template_directory_uri().'/assets/css/login-style.css" rel="stylesheet">';
       $logotipoID = get_post_meta(get_option( 'page_on_front' ), 'logotipo', 1);
       if ($logotipoID) {
       ?>
