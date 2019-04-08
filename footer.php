@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * The template for displaying the footer.
  *
@@ -9,9 +9,9 @@
  * @subpackage Starkers
  * @since Starkers 3.1
  */
+
+	_partials( '_map' );
 ?>
-	
-	<? get_template_part( 'templates/partials/_map' ); ?>
 
 	<footer id="footer" role="contentinfo">
 		<div class="container">
@@ -26,13 +26,13 @@
 
 		<div class="footer-txt">
 			<div class="container d-flex justify-content-between align-itens-center">
-				<p>© Copyright <?= date('Y') ?> - <? bloginfo( 'name' ); ?> - Todos direitos reservados.</p>
-				<? get_template_part( 'templates/partials/_signature' ); ?>
+				<p>© Copyright <?php echo date('Y') ?> - <?php bloginfo( 'name' ); ?> - Todos direitos reservados.</p>
+				<?php _partials( '_signature' ); ?>
 			</div>
 		</div>
 	</footer>
 
-<? wp_footer(); ?>
+<?php wp_footer(); ?>
 <script>jQuery(document).ready(function ($) { $('.preloader').delay(400).fadeOut(500); });</script>
 </body>
 </html>

@@ -4,6 +4,7 @@
 	add_action('init', 'add_custom_image_sizes');
   function add_custom_image_sizes() {
     add_image_size('slide', 1920, 450, true);
+    add_image_size('h-page', 1920, 240, true);
     add_image_size('post-thumb', 1140, 450, true);
   }
 
