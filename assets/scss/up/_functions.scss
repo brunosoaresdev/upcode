@@ -1,17 +1,17 @@
 $up-fonts: (
-  first: '',
+  first: 'Catamaran',
   second: ''
 ) !default;
 
 $up-colors: (
-  first: transparent,
-  second: transparent,
+  first: black,
+  second: white,
   third: transparent,
   fourth: transparent,
   fifth: transparent,
   six: transparent,
   sev: transparent,
-  txt: transparent
+  txt: black
 ) !default;
 
 @mixin h1() { font-size: $h1-font-size; }
@@ -74,4 +74,37 @@ $up-colors: (
   background: linear-gradient(to right, $from 0%, $to 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+$f-xs: 100%;
+$f-sm: map-get($container-max-widths, 'sm');
+$f-md: map-get($container-max-widths, 'ms');
+$f-lg: map-get($container-max-widths, 'lg');
+$f-xl: map-get($container-max-widths, 'xl');
+
+.full-right {
+  display: flex;
+  max-width: calc(100vw - ((100vw - #{$f-xs}) / 2));
+  margin-left: auto;
+  
+  .collumn-3,
+  .collumn-9 {
+    padding: 0 15px;
+  }
+  
+  .collumn-3 {
+    background-color: red;
+    flex: 0 0 calc(#{$f-xs} * .25);
+    max-width: calc(#{$f-xs} * .25);
+  }
+  .collumn-9 {
+    background-color: blue;
+    flex: 0 0 calc(100% - (#{$f-xs} * .25));
+    max-width: calc(100% - (#{$f-xs} * .25));
+  }
+
+  @include media-breakpoint-up(sm) { max-width: calc(100vw - ((100vw - #{$f-sm}) / 2)); }
+  @include media-breakpoint-up(md) { max-width: calc(100vw - ((100vw - #{$f-md}) / 2)); }
+  @include media-breakpoint-up(lg) { max-width: calc(100vw - ((100vw - #{$f-lg}) / 2)); }
+  @include media-breakpoint-up(xl) { max-width: calc(100vw - ((100vw - #{$f-xl}) / 2)); }
 }

@@ -22,7 +22,7 @@
               $logotipo = get_field( 'logotipo', 'option' );
               if ( !empty($logotipo) ) :
             ?>
-              <a class="logotipo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo $logotipo; ?>" class="img-fluid" /></a>
+              <a class="logotipo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo $logotipo; ?>" class="img-fluid change-color" /></a>
             <?php endif; ?>
           </div>
           <div class="col-3 col-md-9"><?php _partials('_nav'); ?></div>

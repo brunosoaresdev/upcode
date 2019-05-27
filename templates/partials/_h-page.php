@@ -6,7 +6,7 @@
     endif;
   endif;
 ?>
-<div class="h-page" <?php if ( is_singular('post') || is_home() ) : echo $bg; else : thumbnail_bg( 'h-page' ); endif; ?>>
+<div class="h-page d-flex flex-column justify-content-end pb-4 mb-4" <?php if ( is_singular('post') || is_home() ) : echo $bg; else : thumbnail_bg( 'h-page' ); endif; ?>>
   <div class="container">
     <?php
       if ( function_exists('yoast_breadcrumb') ) :

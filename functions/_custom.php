@@ -129,3 +129,18 @@
     return '<ul class="pagination" role="navigation">'.$out.'</ul>';
   }
   add_filter( 'wp_pagenavi', 'wiaw_pagenavi_to_bootstrap', 10, 2 );
+
+  // wp auto import
+  add_action( 'after_setup_theme', 'autoimport' );
+
+  function autoimport() {
+    // get the file
+    require_once TEMPLATEPATH . '/App/AutoImport.php';
+
+    // call the function
+    $args = [
+      'file'        => TEMPLATEPATH . '/autoimport/import.xml',
+      'map_user_id' => 1
+    ];
+    auto_import( $args );
+  }

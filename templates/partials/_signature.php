@@ -1,5 +1,5 @@
 <div id="upcode">
   <a href="https://upcode.cloud" target="_blank">
-		<img id="signature" src="https://upcode.cloud/signature/brand.png" class="img-fluid">
+		<img id="signature" src="<?php images_url('brand.svg'); ?>" class="change-color img-fluid">
   </a>
 </div>

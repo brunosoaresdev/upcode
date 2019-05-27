@@ -1,19 +1,36 @@
 @import "up/functions";
 
 body.login {
-  background-color: up-colors("primary");
+  display: flex;
+  background-color: #4845E4;
+
+  #login {
+    padding: 0;
+
+    h1 {
+      a {
+        width: 70%;
+        height: 90px;
+        margin: 0 auto;
+      }
+    }
+  }
   
   #loginform {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 1);
     border: none;
     box-shadow: none;
     
     label {
       color: black;
       font-weight: 500;
+      @include font(12px);
     }
 
     input {
+      padding: 10px;
+      @include font(14px);
+
       &:focus {
         outline: none;
         box-shadow: none;
@@ -22,26 +39,31 @@ body.login {
     
     #wp-submit {
       border: none;
-      background: up-colors("primary") !important;
+      background: #4845E4 !important;
       box-shadow: none;
       padding: 0 20px;
       text-shadow: none;
+      transition: all 150ms ease-in-out;
+
+      &:hover {
+        background: #00F5BD !important;
+      }
     }
   }
 
   #nav,
   #backtoblog {
-    color: black !important;
+    color: white !important;
     text-align: center;
     padding-left: 0;
     
     a {
-      color: black !important;
+      color: white !important;
       text-decoration: none;
       text-shadow: none;
     
       &:hover {
-        color: black !important;
+        color: white !important;
         text-decoration: underline;
       }
     }

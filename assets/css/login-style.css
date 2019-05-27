@@ -1,31 +1,48 @@
-body.login #loginform {
-  background: rgba(255, 255, 255, 0.5);
-  border: none;
-  box-shadow: none; }
-  body.login #loginform label {
-    color: black;
-    font-weight: 500; }
-  body.login #loginform input:focus {
-    outline: none;
-    box-shadow: none; }
-  body.login #loginform #wp-submit {
+body.login {
+  display: flex;
+  background-color: #4845E4; }
+  body.login #login {
+    padding: 0; }
+    body.login #login h1 a {
+      width: 70%;
+      height: 90px;
+      margin: 0 auto; }
+  body.login #loginform {
+    background: white;
     border: none;
-    background: !important;
-    box-shadow: none;
-    padding: 0 20px;
-    text-shadow: none; }
-
-body.login #nav,
-body.login #backtoblog {
-  color: black !important;
-  text-align: center;
-  padding-left: 0; }
-  body.login #nav a,
-  body.login #backtoblog a {
-    color: black !important;
-    text-decoration: none;
-    text-shadow: none; }
-    body.login #nav a:hover,
-    body.login #backtoblog a:hover {
-      color: black !important;
-      text-decoration: underline; }
+    box-shadow: none; }
+    body.login #loginform label {
+      color: black;
+      font-weight: 500;
+      font-size: 12px;
+      font-size: 0.75rem; }
+    body.login #loginform input {
+      padding: 10px;
+      font-size: 14px;
+      font-size: 0.875rem; }
+      body.login #loginform input:focus {
+        outline: none;
+        box-shadow: none; }
+    body.login #loginform #wp-submit {
+      border: none;
+      background: #4845E4 !important;
+      box-shadow: none;
+      padding: 0 20px;
+      text-shadow: none;
+      transition: all 150ms ease-in-out; }
+      body.login #loginform #wp-submit:hover {
+        background: #00F5BD !important; }
+  body.login #nav,
+  body.login #backtoblog {
+    color: white !important;
+    text-align: center;
+    padding-left: 0; }
+    body.login #nav a,
+    body.login #backtoblog a {
+      color: white !important;
+      text-decoration: none;
+      text-shadow: none; }
+      body.login #nav a:hover,
+      body.login #backtoblog a:hover {
+        color: white !important;
+        text-decoration: underline; }

@@ -10,18 +10,16 @@
     
     function wpmidia_custom_login() {
       echo '<link media="all" type="text/css" href="'.get_template_directory_uri().'/assets/css/login-style.css" rel="stylesheet">';
-      $logotipoID = get_post_meta(get_option( 'page_on_front' ), 'logotipo', 1);
-      if ($logotipoID) {
+      $bg = (get_field( 'logotipo', 'option' )) ? get_field( 'logotipo', 'option' ) : 'https://upcode.cloud/signature/logotipo.svg' ;
       ?>
         <style type="text/css" media="screen">
           body.login h1 a {
-            background-image: url(<?php echo wp_get_attachment_url($logotipoID); ?>);
+            background-image: url(<?php echo $bg; ?>);
             background-size: contain;
             background-position: center center;
           }
         </style>
       <?php
-      }
     }
     function wpmidia_custom_wp_login_url() { return home_url(); }
     function wpmidia_custom_wp_login_title() { return get_option('blogname'); }
@@ -37,7 +35,6 @@
       </style>";
     }
   /* ----------------------------------------- Change Icons off nav wp-admin */
-
 
   /* Disables standard dashboard widgets
   /* ----------------------------------------- */
