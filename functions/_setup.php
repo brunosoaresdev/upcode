@@ -13,8 +13,6 @@
 				wp_enqueue_script('propper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js', ['jquery']); 
 				wp_enqueue_script('fancybox', '//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js', ['jquery']);
 				wp_enqueue_script('slick', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js', ['jquery']);
-				wp_enqueue_script('fontawesome', '//use.fontawesome.com/releases/v5.7.2/js/all.js', ['jquery']);
-				wp_enqueue_script('v4-shims', '//use.fontawesome.com/releases/v5.0.8/js/v4-shims.js', ['jquery']);
 				wp_enqueue_script('maps', '//maps.googleapis.com/maps/api/js?key=AIzaSyB1P-H_fyEh6IaGS_mdIAPnMUIiQhKON2s', ['jquery']);
 
 				wp_enqueue_script('acf-maps', $js . 'maps.js', ['jquery']);
@@ -32,7 +30,7 @@
 		function upcode_loadCSS(){
 			$css = get_template_directory_uri() . '/assets/css/';
 			wp_enqueue_style( 'fancybox', '//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css' );
-			wp_enqueue_style( 'f-awesome', '//use.fontawesome.com/releases/v5.0.6/css/all.css' );
+
 		}
 		add_action('wp_enqueue_scripts', 'upcode_loadCSS');
 	/* ----------------------------------------- load css files */
@@ -97,6 +95,7 @@
 				['title'=>'Institucional', 'content'=>'', 'slug'=>'institucional'],
 				['title'=>'Contato', 'content'=>'', 'slug'=>'contato'],
 			]; 
+			if (isset($_GET['activated']) && is_admin()){
 				foreach ($paginas as $pagina) {
 					$page_check = get_page_by_title($pagina['title']);
 					if(!isset($page_check->ID) && !the_slug_exists($pagina['slug'])){
@@ -113,8 +112,23 @@
 							if ($pagina['title'] == 'Blog') { update_option( 'page_for_posts', $newPageId ); }
 					}
 				}
+			}
 		}
 		add_action('after_setup_theme','createPagesifNotExists');
-
-	 
 	/* ----------------------------------------- create pages on start theme */
+
+	add_action( 'after_switch_theme', 'upactivate' );
+  function upactivate() {
+    // we need to include the file below because the activate_plugin() function isn't normally defined in the front-end
+		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+		include_once( ABSPATH . 'wp-admin/includes/file.php' );
+    
+		// activate pre-bundled plugins
+		delete_plugins( ['akismet/akismet.php'] );
+    activate_plugin( 'advanced-custom-fields-pro/acf.php' );
+    activate_plugin( 'advanced-custom-fields-font-awesome/acf-font-awesome.php' );
+    activate_plugin( 'contact-form-7/wp-contact-form-7.php' );
+    activate_plugin( 'regenerate-thumbnails/regenerate-thumbnails.php' );
+    activate_plugin( 'wp-pagenavi/wp-pagenavi.php' );
+    activate_plugin( 'wordpress-seo/wp-seo.php' );
+	}
