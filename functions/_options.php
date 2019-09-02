@@ -6,6 +6,9 @@
     add_image_size('slide', 1920, 650, true);
     add_image_size('h-page', 1920, 240, true);
     add_image_size('post-thumb', 1140, 450, true);
+    add_image_size('square-thumb', 350, 350, true);
+    add_image_size('medium-thumb', 450, 450, true);
+
   }
 
 
@@ -19,7 +22,7 @@ function change_post_menu_label() {
   $menu[5][0] = 'Cases';
   $menu[5][6] = '';
   $submenu['edit.php'][5][0] = 'Cases';
-  $submenu['edit.php'][10][0] = 'Adcionar Cases';
+  $submenu['edit.php'][10][0] = 'Adicionar Cases';
   $submenu['edit.php'][16][0] = 'Novas Tags';
   echo '';
 }
@@ -28,8 +31,8 @@ function change_post_object_label() {
   $labels = &$wp_post_types['post']->labels;
   $labels->name = 'Cases';
   $labels->singular_name = 'Case';
-  $labels->add_new = 'Adcionar Case';
-  $labels->add_new_item = 'Adcionar Novo Case';
+  $labels->add_new = 'Adicionar Case';
+  $labels->add_new_item = 'Adicionar Novo Case';
   $labels->edit_item = 'Editar Case';
   $labels->new_item = 'Cases';
   $labels->view_item = 'Visualizar Case';

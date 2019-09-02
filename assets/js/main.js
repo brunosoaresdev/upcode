@@ -95,7 +95,7 @@
 		$('.mask-phone, input[type="tel"]').mask(SPMaskBehavior, spOptions);
 
 		// SELECT , caso queira excluir algum elemento, colocar 'select:not(elementos)'
-		$('select').not('.multiple').wrap('<div class="select-box"></div>');
+		$('select').not('.no-box').not('.multiple').wrap('<div class="select-box"></div>');
 
 		// Fancybox
 		$("a[href$='.jpg'], a[href$='.png'], a[href$='.jpeg'], a[href$='.gif'], .fancybox").fancybox({
@@ -109,6 +109,26 @@
 		    if (target.length) { $('html,body').animate({ scrollTop: target.offset().top }, 1000); return false; }
 		  }
 		});
-		/* -----------------------------------------  Default Scripts */
+		/* -----------------------------------------  Gallery images each */
+
+
+		var $images = $('.wp-block-gallery img');
+		var fb = [];
+		
+		if($images.length > 0){
+				$images.each(function(index, img) {
+		   fb.push({
+			 src : img.src,
+			 type: 'image',
+			 $orig : $(img).parent()
+		   })
+		});
+
+		$('.wp-block-gallery').on('click', 'img', function() {
+		  $.fancybox.open(fb, {
+			// Here you can put your custom options
+		  }, $images.index(this))
+		});
+		}
 	});
 })(jQuery, this);

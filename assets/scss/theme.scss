@@ -1,7 +1,10 @@
+//variáveis globais para todos componentes e bibliotecas 
+@import "up/vars";
+
 @import "bootstrap";
 @import "up/functions";
 @import "up/main";
-
+@import "fa/fa";
 @import "slick";
 @import "slick-theme";
 @import "bsnav/bsnav";
@@ -125,6 +128,10 @@
     article.page {
       &.index {}
       &.single {}
+    }
+
+    section{
+      
     }
   }
 /* ----------------------------------------- content */

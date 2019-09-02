@@ -127,5 +127,5 @@
     $out = str_replace('</span>','</span></li>',$out);
     $out = str_replace('</div>','',$out);
     return '<ul class="pagination" role="navigation">'.$out.'</ul>';
-  }
-  add_filter( 'wp_pagenavi', 'wiaw_pagenavi_to_bootstrap', 10, 2 );
+}
+add_filter( 'wp_pagenavi', 'wiaw_pagenavi_to_bootstrap', 10, 2 );

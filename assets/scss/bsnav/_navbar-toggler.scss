@@ -1,4 +1,7 @@
-.navbar-toggler {
+/*------------------------------------------------------------*/
+/*	NAVBAR TOGGLER
+/*------------------------------------------------------------*/
+.navbar-toggler{
 	border: none;
 	width: 32px;
 	height: 24px;
@@ -7,13 +10,16 @@
 	border-radius: 0;
 	cursor: pointer;
 
-	.navbar-toggler-icon {
+
+
+
+	.navbar-toggler-icon{
 		display: block;
 		top: 10px;
 	
 		&,
 		&::before,
-		&::after {
+		&::after{
 			background-color: #333;
 			width: 100%;
 			height: 3px;
@@ -26,128 +32,200 @@
 		}
 	
 		&::before,
-		&::after {
+		&::after{
 			content: "";
 			display: block;
 		}
 	
-		&::before { top: -10px; }
-		&::after { bottom: -10px; }
+		&::before{ top: -10px; }
+		&::after{ bottom: -10px; }
 
 		transition-property: opacity, filter;
 		transition-duration: .15s;
 		transition-timing-function: linear;
-	}
+	}//navbar-toggler-icon
 
-	&.toggler-spin {
-		.navbar-toggler-icon {
+
+
+
+
+
+	/*------------------------------------------------------------*/
+	/*	SPIN
+	/*------------------------------------------------------------*/
+	&.toggler-spin{
+
+		.navbar-toggler-icon{
 			transition-duration: 0.22s;
       transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
-      &::before  {
+      &::before {
         transition: top 0.1s 0.25s ease-in,
 				opacity 0.1s ease-in;
       }
 
-      &::after  {
+      &::after {
         transition: bottom 0.1s 0.25s ease-in,
 				transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
       }
-		}
+		}//navbar-toggler-icon
 
-		&.active {
-      .navbar-toggler-icon {
+
+		&.active{
+      .navbar-toggler-icon{
 				transform: rotate(225deg);
         transition-delay: 0.12s;
         transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 
-        &::before  {
+        &::before {
           top: 0;
           opacity: 0;
           transition: top 0.1s ease-out,
 					opacity 0.1s 0.12s ease-out;
         }
 
-        &::after  {
+        &::after {
           bottom: 0;
           transform: rotate(-90deg);
           transition: bottom 0.1s ease-out,
 					transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
         }
-      }
-    }
-	}
+      }//navbar-toggler-icon
+    }//active
 
-	&.toggler-elastic {
-		.navbar-toggler-icon {
+	}//toggler-spin
+
+
+
+
+
+
+	/*------------------------------------------------------------*/
+	/*	ELASTIC
+	/*------------------------------------------------------------*/
+	&.toggler-elastic{
+
+		.navbar-toggler-icon{
 			top: 0;
       transition-duration: 0.275s;
       transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-      &::before  {
+      &::before {
         top: 10px;
         transition: opacity 0.125s 0.275s ease;
       }
 
-      &::after  {
+      &::after {
         top: 20px;
         transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       }
-		}
+		}//navbar-toggler-icon
 
-		&.active {
-      .navbar-toggler-icon {
+
+		&.active{
+      .navbar-toggler-icon{
+				// $y-offset: $hamburger-layer-spacing + $hamburger-layer-height;
+
         transform: translate3d(0, 10px, 0) rotate(135deg);
         transition-delay: 0.075s;
 
-        &::before  {
+        &::before {
           transition-delay: 0s;
           opacity: 0;
         }
 
-        &::after  {
+        &::after {
           transform: translate3d(0, -20px, 0) rotate(-270deg);
           transition-delay: 0.075s;
         }
-      }
-    }
-	}
+      }//navbar-toggler-icon
+    }//active
 
-	&.toggler-spring {
-		.navbar-toggler-icon {
+	}//toggler-elastic
+
+
+
+
+
+
+
+	/*------------------------------------------------------------*/
+	/*	SPRING
+	/*------------------------------------------------------------*/
+	&.toggler-spring{
+
+		.navbar-toggler-icon{
 			top: 0;
       transition: background-color 0s 0.13s linear;
 
-      &::before  {
+      &::before {
         top: 10px;
         transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
 				transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
       }
 
-      &::after  {
+      &::after {
         top: 20px;
         transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
 				transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
       }
-		}
+		}//navbar-toggler-icon
 
-		&.active {
-      .navbar-toggler-icon {
+
+		&.active{
+      .navbar-toggler-icon{
 				transition-delay: 0.22s;
-        background-color: transparent;
+        background-color: transparent !important;
 
-        &::before  {
+        &::before {
           top: 0;
           transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
           transform: translate3d(0, 10px, 0) rotate(45deg);
         }
 
-        &::after  {
+        &::after {
           top: 0;
           transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
           transform: translate3d(0, 10px, 0) rotate(-45deg);
         }
-      }
-    }
+      }//navbar-toggler-icon
+    }//active
+
+	}//toggler-spring
+
+
+
+
+
+	&.active, 
+	&:hover, 
+	&:active, 
+	&:focus, 
+	&:active:focus,
+
+	&.active.btn, 
+	&.active.focus.btn, 
+	&.btn:active, 
+	&.btn:active:focus, 
+	&.btn:active:hover, 
+	&.btn:focus, 
+	&.btn:hover, 
+	&.btn:not(:disabled):not(.disabled).active, 
+	&.btn:not(:disabled):not(.disabled):active, 
+	&.focus.btn, 
+	&button.active, 
+	&button.active.focus, 
+	&button.focus, 
+	&button:active, 
+	&button:active:focus, 
+	&button:active:hover, 
+	&button:focus, 
+	&button:hover, 
+	&button:not(:disabled):not(.disabled).active, 
+	&button:not(:disabled):not(.disabled):active{
+		background: transparent !important;
+		border: none !important;
+		border-color: transparent !important;
 	}
-}
+
+}//navbar-toggler
