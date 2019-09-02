@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-9">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<article <?php post_class( 'page single' ); ?> >
 					<figure><?php the_post_thumbnail( 'post-thumb', array( 'class' => 'img-fluid' ) ); ?></figure>
@@ -8,6 +8,6 @@
 				</article>
 			<?php endwhile; ?>
 		</div>
-		<div class="col-md-4"><?php get_sidebar(); ?></div>
+		<div class="col-md-3"><?php get_sidebar(); ?></div>
 	</div>
 </div>

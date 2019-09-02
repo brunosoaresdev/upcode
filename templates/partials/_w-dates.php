@@ -8,8 +8,7 @@
 			$whatsapp = str_replace('-', '', $whatsapp);
 			if( !empty($whats) ) :
 		?>
-			<span><i class="fab text-primary fa-whatsapp"></i> Whatsapp</span>
-<!--			<a href="" target="_blank" class="flutuante">-->
+			<span><i class="fab text-primary fa-whatsapp"></i> Whatsapp</span> 
 			<a class='mask-phone' href='https://api.whatsapp.com/send?phone=55<?= $whatsapp; ?>&text=Olá, como vai?' target="_blank"><?= $whats; ?></a>
 		<? endif; ?>
 	</li>
