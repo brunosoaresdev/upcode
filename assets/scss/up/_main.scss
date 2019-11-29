@@ -1,240 +1,18 @@
-.h-page {
-  min-height: 240px;
-  background-color: up-colors('first');
-  color: up-colors('second');
-
-  h2 {
-    margin: 0;
-  }
-}
-
-.btn {
-  &.s-btn {
-    cursor: pointer;
-    background-color: up-colors('second');
-    color: white;
-    line-height: 30px;
-    @include font(18px);
-    @include radius(0);
-
-    &:focus {
-      outline: none;
-      box-shadow: none;
-    }
-
-    &.mw-200 { max-width: 200px; }
-  }
-}
-
-ul {
-  &.social-networks {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border: none;
-
-    li {
-      display: flex;
-      align-items: center;
-      height: 100%;
-      padding: 0 5px;
-      @include transition(all 300ms ease-in-out);
-
-      &:first-child,
-      &:last-child { border: none; }
-
-      &:first-child { padding-left: 0; }
-
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 20px;
-        height: 20px;
-        border: none;
-        color: up-colors('txt');
-
-        svg { @include font(14px) }
-      }
-
-      &:hover { a { color: white; } }
-    }
-  }
-
-  &.phones {
-    li {
-      a {
-        color: up-colors('fourth');
-        letter-spacing: -0.42px;
-        line-height: 26px;
-        @include font(16px);
-
-        @include media-breakpoint-up(md) {
-          letter-spacing: -0.61px;
-          line-height: 42px;
-          @include font(22px);
-        } // Large devices (desktops, 768px and up)
-      }
-    }
-  }
-
-  &.l-categories {
-    border: 1px solid #DFDFEC;
-    padding: 10px 20px;
-    box-shadow: 0px 3px 7px rgba(#B7B7C5, .4);
-    min-width: 100%;
-
-    h5 {
-      color: up-colors('fourth');
-      line-height: 32px;
-      @include font(17px);
-    }
-
-    li {
-      position: relative;
-      padding: 0 20px;
-
-      &::after {
-        position: absolute;
-        content: '';
-        top: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        width: 1px;
-        background-color: #DFDFEC;
-      }
-
-      &:last-child {
-        &::after { display: none; }
-      }
-      
-      a {
-        color: up-colors('first');
-      }
-    }
-
-    a {
-      &.more {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        background-color: up-colors('first');
-        padding: 0 10px;
-        line-height: 32px;
-        @include font(17px);
-        @include radius(2px);
-
-        &:hover {
-          background-color: up-colors('second');
-        }
-      }
-    }
-  }
-}
-
-form {
-  &#search-box {
-    border: none;
-    @include radius(0);
-
-    input {
-      border: none;
-      background-color: transparent;
-      padding: 10px 0;
-      box-shadow: none;
-      color: up-colors('fourth');
-      font-family: up-fonts('first');
-      line-height: 30px;
-      @include font(18px);
-      @include radius(0);
-
-      &::placeholder {
-        color: #B9B9B9;
-      }
-    }
-
-    button {
-      border: none;
-      cursor: pointer;
-      color: up-colors('second');
-      @include radius(0);
-
-      &:hover { background-color: transparent; }
-    }
-  }
-}
-
-.title {
-  &--section {
-    position: relative;
-    font-family: up-fonts('first');
-    color: up-colors('fourth');
-    text-align: right;
-    margin: 5px 0;
-    letter-spacing: -0.64px;
-    line-height: 42px;
-    @include font(23px);
-
-    @include media-breakpoint-up(md) {
-      letter-spacing: -1.11px;
-      line-height: 46px;
-      @include font(40px);
-    } // Large devices (desktops, 768px and up)
-  }
-
-  &--small {
-    color: up-colors('first');
-    line-height: 42px;
-    @include font(22px);
-
-    @include media-breakpoint-up(md) {
-      line-height: 33px;
-      @include font(18px);
-    } // Large devices (desktops, 768px and up)
-  }
-
-  &--sub {
-    text-align: right;
-    color: up-colors('fourth');
-    margin: 0;
-    letter-spacing: -0.42px;
-    line-height: 28px;
-    @include font(15px);
-
-    @include media-breakpoint-up(md) {
-      letter-spacing: -0.64px;
-      @include font(23px);
-    } // Large devices (desktops, 768px and up)
-  }
-
-  &--widget {
-    font-family: up-fonts('first');
-    color: up-colors('second');
-    margin: 0 0 10px;
-    @include font(18px);
-  }
-}
-
 .pagination {
   .page-item {
     margin: 0 5px;
     
     .page-link {
-      border-color: up-colors('fourth');
-      color: up-colors('fourth');
+      border-color: up-colors('fou');
+      color: up-colors('fou');
       @include radius(2px);
     }
 
     &:hover,
     &.active {
       .page-link {
-        background-color: up-colors('first');
-        border-color: up-colors('first');
+        background-color: up-colors('fir');
+        border-color: up-colors('fir');
         color: white;
       }
     }
@@ -247,8 +25,7 @@ form {
   }
 }
 
-.wpcf7,
-.custom-register {
+.wpcf7 {
   form {
     display: flex;
     margin: 30px 0;
@@ -263,10 +40,10 @@ form {
     width: 100%;
     margin: 0 0 20px;
     padding: 10px;
-    border-color: up-colors('first') !important;
-    background-color: up-colors('first');
+    border-color: up-colors('fir') !important;
+    background-color: up-colors('fir');
     text-align: center;
-    font-family: up-fonts('first');
+    font-family: up-fonts('fir');
     color: white;
     @include font(16px);
   }
@@ -281,8 +58,8 @@ form {
     z-index: -1;
     background-color: white;
     padding: 2px 5px;
-    font-family: up-fonts('first');
-    color: up-colors('fourth');
+    font-family: up-fonts('fir');
+    color: up-colors('fou');
     line-height: 33px;
     @include font(18px);
     @include transition(all 250ms ease-in-out);
@@ -291,7 +68,7 @@ form {
       top: -10px;
       height: 20px;
       z-index: 10;
-      color: up-colors('second');
+      color: up-colors('sec');
       @include font(14px);
     }
     &:focus { outline: none; }
@@ -302,8 +79,8 @@ form {
     width: 100%;
     padding: 7.5px 10px;
     margin: 0 0 15px;
-    font-family: up-fonts('first');
-    color: up-colors('fourth');
+    font-family: up-fonts('fir');
+    color: up-colors('fou');
     margin: 0;
     line-height: 33px;
     outline: none;
@@ -312,8 +89,8 @@ form {
     @include font(18px);
     @include radius(0);
     @include placeholder {
-      font-family: up-fonts('first');
-      color: up-colors('fourth');
+      font-family: up-fonts('fir');
+      color: up-colors('fou');
       margin: 0;
       line-height: 33px;
       @include font(18px);
@@ -322,7 +99,7 @@ form {
     &.wpcf7-not-valid { border-color: red; }
     &:focus {
       outline: none;
-      border-color: up-colors('second');
+      border-color: up-colors('sec');
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none;
@@ -332,13 +109,13 @@ form {
   button {
     display: flex;
     justify-content: center;
-    font-family: up-fonts('first');
+    font-family: up-fonts('fir');
     cursor: pointer;
     width: 100%;
     padding: 10px 0;
     position: relative;
     border: none;
-    background: up-colors('first');
+    background: up-colors('fir');
     color: white;
     z-index: 10;
     overflow: hidden;
@@ -378,13 +155,13 @@ form {
 
     &:before {
       left: 0;
-      background: up-colors('first');
+      background: up-colors('fir');
     }
 
     &:after {
       left: 7.5px;
       animation-delay: 180ms;
-      background: up-colors('second');
+      background: up-colors('sec');
     }
   }
 
@@ -407,7 +184,7 @@ form {
     
           &:checked + .wpcf7-list-item-label::before {
             content: "\f0c8";
-            color: up-colors('first');
+            color: up-colors('fir');
             font-size: 12px;
             font-family: FontAwesome;
             font-style: normal;
@@ -420,7 +197,7 @@ form {
 
         .wpcf7-list-item-label {
           display: inline-block;
-          font-family: up-fonts('first');
+          font-family: up-fonts('fir');
           font-weight: normal;
           left: 0px;
           line-height: 14px;
@@ -430,7 +207,7 @@ form {
       
           &::before {
             background: white;
-            border: 1px solid up-colors('first');
+            border: 1px solid up-colors('fir');
             border-radius: 3px;
             content: "";
             height: 15px;
@@ -466,8 +243,8 @@ form {
 	width: 100%;
 
 	select {
-    font-family: up-fonts('first');
-	  color: up-colors('second');
+    font-family: up-fonts('fir');
+	  color: up-colors('sec');
     line-height: 20px;
 	  position: relative;
 	  z-index: 2;
@@ -529,22 +306,22 @@ form {
     height: 25px;
 
     &:nth-child(1) {
-      background: up-colors('first');
+      background: up-colors('fir');
     }
 
     &:nth-child(2) {
       animation-delay: 180ms;
-      background: up-colors('second');
+      background: up-colors('sec');
     }
 
     &:nth-child(3) {
       animation-delay: 360ms;
-      background: up-colors('first');
+      background: up-colors('fir');
     }
 
     &:nth-child(4) {
       animation-delay: 540ms;
-      background: up-colors('second');
+      background: up-colors('sec');
     }
   }
 
@@ -615,14 +392,14 @@ iframe { max-width: 100%; }
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
 a, ul, ul li, input, textarea, span, p, label {
-	font-family: up-fonts('first');
+	font-family: up-fonts('fir');
 	-webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
   &::selection,
   &::-moz-selection,
   &::-webkit-selection {
-		background-color: up-colors('second');
+		background-color: up-colors('sec');
 		color: white;
 	}
 }
@@ -696,7 +473,7 @@ img.aligncenter {
 	}
 	
 	a {
-		color: up-colors('second');
+		color: up-colors('sec');
 		&:hover { text-decoration: underline; }
 	}
 	

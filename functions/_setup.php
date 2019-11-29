@@ -5,16 +5,15 @@
 			if (!is_admin()){
 				// desregistrando o jquery nativo e registrando o do CDN do Google.
 				wp_deregister_script('jquery');
-					wp_register_script('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js', false, '3.2.1');
+				wp_register_script('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js', false, '3.2.1');
 				wp_enqueue_script('jquery');
 
 				$js = get_template_directory_uri() . '/assets/js/';
-						wp_enqueue_script('fancybox', '//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js', ['jquery']);
+				wp_enqueue_script('fancybox', '//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js', ['jquery']);
 				wp_enqueue_script('slick', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js', ['jquery']);
 				wp_enqueue_script('maps', '//maps.googleapis.com/maps/api/js?key=AIzaSyB1P-H_fyEh6IaGS_mdIAPnMUIiQhKON2s', ['jquery']);
-
 				wp_enqueue_script('acf-maps', $js . 'maps.js', ['jquery']);
-				wp_enqueue_script('bootstrap-js', $js . 'bootstrap.bundle.min.js', ['jquery','propper']);
+				wp_enqueue_script('bootstrap-js', $js . 'bootstrap.min.js', ['jquery']);
 				wp_enqueue_script('bsnav', $js . 'bsnav.min.js', ['jquery']);
 				wp_enqueue_script('mask', $js . 'jquery.mask.min.js', ['jquery']);
 				wp_enqueue_script('main', $js . 'main.js', ['jquery']);
@@ -28,7 +27,6 @@
 		function upcode_loadCSS(){
 			$css = get_template_directory_uri() . '/assets/css/';
 			wp_enqueue_style( 'fancybox', '//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css' );
-
 		}
 		add_action('wp_enqueue_scripts', 'upcode_loadCSS');
 	/* ----------------------------------------- load css files */
@@ -48,7 +46,6 @@
 		endif;
 	/* ------------------ warn wordpress to run the function upcode_setup() when 'after_setup_theme' hook run */
 
-
 	/* register widgetized areas, including two sidebars and four widget-ready columns in the footer.
 	/* ----------------------------------------- */
 		function twentyten_widgets_init() {
@@ -64,7 +61,6 @@
 		}
 		add_action( 'widgets_init', 'twentyten_widgets_init' );
 	/* ----------------------------------------- */
-
 
 	/* add editor on body-class if user is editor */
 	/* --------------------------------------------------- */
@@ -87,7 +83,6 @@
 		}
 		function createPagesifNotExists(){
 			$paginas = [
-				// [Title, Content, 'Slug']
 				['title'=>'Home', 'content'=>'', 'slug'=>'home'],
 				['title'=>'Blog', 'content'=>'', 'slug'=>'blog'],
 				['title'=>'Institucional', 'content'=>'', 'slug'=>'institucional'],
@@ -97,17 +92,17 @@
 				foreach ($paginas as $pagina) {
 					$page_check = get_page_by_title($pagina['title']);
 					if(!isset($page_check->ID) && !the_slug_exists($pagina['slug'])){
-							$newPageId = wp_insert_post(array(
-								'post_type' => 'page',
-								'post_title' => $pagina['title'],
-								'post_content' => $pagina['content'],
-								'post_status' => 'publish',
-								'post_author' => 1,
-								'post_slug' => $pagina['slug']
-							));
-							if ($pagina['title'] == 'Home') {
-						 		update_option( 'page_on_front', $newPageId ); update_option( 'show_on_front', 'page' ); }
-							if ($pagina['title'] == 'Blog') { update_option( 'page_for_posts', $newPageId ); }
+						$newPageId = wp_insert_post(array(
+							'post_type' => 'page',
+							'post_title' => $pagina['title'],
+							'post_content' => $pagina['content'],
+							'post_status' => 'publish',
+							'post_author' => 1,
+							'post_slug' => $pagina['slug']
+						));
+						if ($pagina['title'] == 'Home') {
+							update_option( 'page_on_front', $newPageId ); update_option( 'show_on_front', 'page' ); }
+						if ($pagina['title'] == 'Blog') { update_option( 'page_for_posts', $newPageId ); }
 					}
 				}
 			}
