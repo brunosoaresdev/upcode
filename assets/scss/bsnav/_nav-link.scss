@@ -1,12 +1,13 @@
-/*---------------------------------------------------------*/
-/*	NAV LINK
-/*---------------------------------------------------------*/
 .navbar-expand-lg .navbar-nav .nav-link,
-.navbar-nav .nav-link{
-	color: inherit;
-	padding: 20px 15px;
+.navbar-nav .nav-link {
+	font-family: up-fonts('fir');
+	color: up-colors('thi');
+	padding: 20px 30px;
 	display: block;
 	position: relative;
 	transition: .3s;
+	text-transform: uppercase;
 	cursor: pointer;
-}//nav-link
+	@include font(18px);
+	@include bold();
+}

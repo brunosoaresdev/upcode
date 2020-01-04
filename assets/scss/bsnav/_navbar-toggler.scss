@@ -1,25 +1,23 @@
-/*------------------------------------------------------------*/
-/*	NAVBAR TOGGLER
-/*------------------------------------------------------------*/
-.navbar-toggler{
+.navbar-toggler {
 	border: none;
 	width: 32px;
 	height: 24px;
 	padding: 0;
 	position: relative;
-	border-radius: 0;
+	box-shadow: none;
 	cursor: pointer;
+	@include radius(0);
 
-
-
-
-	.navbar-toggler-icon{
+	.navbar-toggler-icon {
 		display: block;
 		top: 10px;
+		transition-property: opacity, filter;
+		transition-duration: .15s;
+		transition-timing-function: linear;
 	
 		&,
 		&::before,
-		&::after{
+		&::after {
 			background-color: #333;
 			width: 100%;
 			height: 3px;
@@ -32,30 +30,17 @@
 		}
 	
 		&::before,
-		&::after{
+		&::after {
 			content: "";
 			display: block;
 		}
 	
 		&::before{ top: -10px; }
 		&::after{ bottom: -10px; }
+	}
 
-		transition-property: opacity, filter;
-		transition-duration: .15s;
-		transition-timing-function: linear;
-	}//navbar-toggler-icon
-
-
-
-
-
-
-	/*------------------------------------------------------------*/
-	/*	SPIN
-	/*------------------------------------------------------------*/
-	&.toggler-spin{
-
-		.navbar-toggler-icon{
+	&.toggler-spin {
+		.navbar-toggler-icon {
 			transition-duration: 0.22s;
       transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
@@ -68,11 +53,10 @@
         transition: bottom 0.1s 0.25s ease-in,
 				transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
       }
-		}//navbar-toggler-icon
+		}
 
-
-		&.active{
-      .navbar-toggler-icon{
+		&.active {
+      .navbar-toggler-icon {
 				transform: rotate(225deg);
         transition-delay: 0.12s;
         transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -90,21 +74,11 @@
           transition: bottom 0.1s ease-out,
 					transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
         }
-      }//navbar-toggler-icon
-    }//active
+      }
+    }
+	}
 
-	}//toggler-spin
-
-
-
-
-
-
-	/*------------------------------------------------------------*/
-	/*	ELASTIC
-	/*------------------------------------------------------------*/
 	&.toggler-elastic{
-
 		.navbar-toggler-icon{
 			top: 0;
       transition-duration: 0.275s;
@@ -119,13 +93,10 @@
         top: 20px;
         transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       }
-		}//navbar-toggler-icon
+		}
 
-
-		&.active{
-      .navbar-toggler-icon{
-				// $y-offset: $hamburger-layer-spacing + $hamburger-layer-height;
-
+		&.active {
+      .navbar-toggler-icon {
         transform: translate3d(0, 10px, 0) rotate(135deg);
         transition-delay: 0.075s;
 
@@ -138,23 +109,12 @@
           transform: translate3d(0, -20px, 0) rotate(-270deg);
           transition-delay: 0.075s;
         }
-      }//navbar-toggler-icon
-    }//active
+      }
+    }
+	}
 
-	}//toggler-elastic
-
-
-
-
-
-
-
-	/*------------------------------------------------------------*/
-	/*	SPRING
-	/*------------------------------------------------------------*/
-	&.toggler-spring{
-
-		.navbar-toggler-icon{
+	&.toggler-spring {
+		.navbar-toggler-icon {
 			top: 0;
       transition: background-color 0s 0.13s linear;
 
@@ -169,40 +129,35 @@
         transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
 				transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
       }
-		}//navbar-toggler-icon
+		}
 
-
-		&.active{
-      .navbar-toggler-icon{
+		&.active {
+      .navbar-toggler-icon {
 				transition-delay: 0.22s;
         background-color: transparent !important;
 
         &::before {
           top: 0;
           transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
-          transform: translate3d(0, 10px, 0) rotate(45deg);
+					transform: translate3d(0, 10px, 0) rotate(45deg);
+					background-color: white
         }
 
         &::after {
           top: 0;
           transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
-          transform: translate3d(0, 10px, 0) rotate(-45deg);
+					transform: translate3d(0, 10px, 0) rotate(-45deg);
+					background-color: white
         }
-      }//navbar-toggler-icon
-    }//active
-
-	}//toggler-spring
-
-
-
-
+      }
+    }
+	}
 
 	&.active, 
 	&:hover, 
 	&:active, 
 	&:focus, 
 	&:active:focus,
-
 	&.active.btn, 
 	&.active.focus.btn, 
 	&.btn:active, 
@@ -222,10 +177,11 @@
 	&button:focus, 
 	&button:hover, 
 	&button:not(:disabled):not(.disabled).active, 
-	&button:not(:disabled):not(.disabled):active{
+	&button:not(:disabled):not(.disabled):active {
 		background: transparent !important;
 		border: none !important;
 		border-color: transparent !important;
+		box-shadow: none !important;
+		outline: none !important;
 	}
-
-}//navbar-toggler
+}

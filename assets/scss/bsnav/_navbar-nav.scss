@@ -1,20 +1,13 @@
-/*-------------------------------------------------*/
-/*	NAVBAR NAV
-/*-------------------------------------------------*/
 .container > .navbar-collapse,
-.container-fluid > .navbar-collapse{
+.container-fluid > .navbar-collapse {
 	margin-left: -15px;
 	margin-right: -15px;
-}//navbar-collapse
-
+}
 
 .navbar-nav,
-.navbar .nav-justified{
-	float: none;
-}//navbar-nav
+.navbar .nav-justified { float: none; }
 
-
-.text-center .navbar-nav{
+.text-center .navbar-nav {
 	margin: 0;
 	display: inline-block;
-}//text-center .navbar-nav
+}

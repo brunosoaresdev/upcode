@@ -333,19 +333,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/assets\/scss\/_slick-theme.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/assets\/scss\/_slick-theme.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/assets\/scss\/_slick.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -2167,6 +2154,13 @@
 		"oAP": "\/templates\/partials\/_nav.php",
 		"oF": 0
 		},
+	"\/templates\/partials\/_newsletter.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/templates\/partials\/_newsletter.php",
+		"oF": 0
+		},
 	"\/templates\/partials\/_s-networks.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2200,6 +2194,13 @@
 		"ft": 8192,
 		"oA": 1,
 		"oAP": "\/templates\/partials\/_start.php",
+		"oF": 0
+		},
+	"\/templates\/partials\/_w-dates.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/templates\/partials\/_w-dates.php",
 		"oF": 0
 		},
 	"\/vendor\/afragen\/wp-dependency-installer\/composer.json": {
@@ -6801,109 +6802,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/vendor\/symfony\/translation\/Writer\/TranslationWriterInterface.php",
-		"oF": 0
-		},
-	"\/vendor\/tareq1988\/wp-eloquent\/.gitignore": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/vendor\/tareq1988\/wp-eloquent\/.gitignore",
-		"oF": 0
-		},
-	"\/vendor\/tareq1988\/wp-eloquent\/composer.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/vendor\/tareq1988\/wp-eloquent\/composer-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/vendor\/tareq1988\/wp-eloquent\/composer.lock": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/vendor\/tareq1988\/wp-eloquent\/composer.lock",
-		"oF": 0
-		},
-	"\/vendor\/tareq1988\/wp-eloquent\/readme.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/vendor\/tareq1988\/wp-eloquent\/readme.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/vendor\/tareq1988\/wp-eloquent\/src\/Eloquent\/Database.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/vendor\/tareq1988\/wp-eloquent\/src\/Eloquent\/Database.php",
-		"oF": 0
-		},
-	"\/vendor\/tareq1988\/wp-eloquent\/src\/Eloquent\/Facades\/DB.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/vendor\/tareq1988\/wp-eloquent\/src\/Eloquent\/Facades\/DB.php",
-		"oF": 0
-		},
-	"\/vendor\/tareq1988\/wp-eloquent\/src\/Eloquent\/Model.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/vendor\/tareq1988\/wp-eloquent\/src\/Eloquent\/Model.php",
-		"oF": 0
-		},
-	"\/vendor\/tareq1988\/wp-eloquent\/src\/Eloquent\/Resolver.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/vendor\/tareq1988\/wp-eloquent\/src\/Eloquent\/Resolver.php",
-		"oF": 0
-		},
-	"\/vendor\/tareq1988\/wp-eloquent\/src\/WP\/Comment.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/vendor\/tareq1988\/wp-eloquent\/src\/WP\/Comment.php",
-		"oF": 0
-		},
-	"\/vendor\/tareq1988\/wp-eloquent\/src\/WP\/Post.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/vendor\/tareq1988\/wp-eloquent\/src\/WP\/Post.php",
-		"oF": 0
-		},
-	"\/vendor\/tareq1988\/wp-eloquent\/src\/WP\/PostMeta.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/vendor\/tareq1988\/wp-eloquent\/src\/WP\/PostMeta.php",
-		"oF": 0
-		},
-	"\/vendor\/tareq1988\/wp-eloquent\/src\/WP\/User.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/vendor\/tareq1988\/wp-eloquent\/src\/WP\/User.php",
-		"oF": 0
-		},
-	"\/vendor\/tareq1988\/wp-eloquent\/src\/WP\/UserMeta.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/vendor\/tareq1988\/wp-eloquent\/src\/WP\/UserMeta.php",
 		"oF": 0
 		}
 	},

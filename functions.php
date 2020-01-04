@@ -1,8 +1,7 @@
 <?php
 	use App\AcfUp;
 
-	require_once ('vendor/autoload.php'); // uncomment this line if you want to use composer
-	//WP_Dependency_Installer::instance()->run( __DIR__ );
+	require_once ('vendor/autoload.php');
 
 	// Define theme constants
 	define('UP_PARTIALS_PATH', get_stylesheet_directory() . '/templates/partials/');
